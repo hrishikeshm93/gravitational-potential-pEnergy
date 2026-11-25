@@ -1,0 +1,2874 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravitation: Field, Potential Energy &amp; Potential | Class 11 NCERT Interactive E-Book</title>
+
+  <!-- Tailwind CSS CDN & Safe Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX for Crisp Mathematical & Physics Equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .font-mono-math {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Custom Scrollbar for Horizontal Tab Bar on Mobile */
+    .tab-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .tab-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .tab-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(100, 116, 139, 0.35);
+      border-radius: 9999px;
+    }
+
+    /* Smooth Tab Fade Animation */
+    .fade-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Highlighted NCERT Formula Boxes (Light Mode) */
+    .formula-box-pink {
+      background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+      border-left: 4px solid #db2777;
+      box-shadow: 0 4px 14px rgba(219, 39, 119, 0.08);
+    }
+    .formula-box-indigo {
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      border-left: 4px solid #4f46e5;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.08);
+    }
+    .formula-box-cyan {
+      background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+      border-left: 4px solid #0891b2;
+      box-shadow: 0 4px 14px rgba(8, 145, 178, 0.08);
+    }
+
+    /* Highlighted NCERT Formula Boxes (Dark Mode) */
+    html.dark .formula-box-pink {
+      background: linear-gradient(135deg, rgba(131, 24, 67, 0.35) 0%, rgba(157, 23, 77, 0.25) 100%);
+      border-left: 4px solid #f472b6;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+    html.dark .formula-box-indigo {
+      background: linear-gradient(135deg, rgba(49, 46, 129, 0.45) 0%, rgba(55, 48, 163, 0.3) 100%);
+      border-left: 4px solid #818cf8;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+    html.dark .formula-box-cyan {
+      background: linear-gradient(135deg, rgba(22, 78, 99, 0.45) 0%, rgba(14, 116, 144, 0.3) 100%);
+      border-left: 4px solid #22d3ee;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Consistent Dark Mode Surface Harmonization for Soft Tinted Callouts */
+    html.dark body {
+      background-color: #020617 !important;
+      color: #f1f5f9 !important;
+    }
+    html.dark nav {
+      background-color: rgba(15, 23, 42, 0.95) !important;
+      border-color: #1e293b !important;
+    }
+    html.dark .bg-white {
+      background-color: #0f172a !important;
+    }
+    html.dark .bg-slate-50,
+    html.dark .bg-slate-50\/70 {
+      background-color: #1e293b !important;
+    }
+    html.dark .border-slate-200 {
+      border-color: #334155 !important;
+    }
+    html.dark .border-slate-100 {
+      border-color: #1e293b !important;
+    }
+    html.dark .text-slate-900 {
+      color: #f8fafc !important;
+    }
+    html.dark .text-slate-800 {
+      color: #e2e8f0 !important;
+    }
+    html.dark .text-slate-700 {
+      color: #cbd5e1 !important;
+    }
+    html.dark .text-slate-600 {
+      color: #94a3b8 !important;
+    }
+    html.dark .bg-sky-50,
+    html.dark .bg-sky-50\/70 {
+      background-color: rgba(12, 74, 110, 0.3) !important;
+    }
+    html.dark .border-sky-100,
+    html.dark .border-sky-200 {
+      border-color: rgba(56, 189, 248, 0.25) !important;
+    }
+    html.dark .text-sky-950,
+    html.dark .text-sky-900 {
+      color: #bae6fd !important;
+    }
+    html.dark .bg-indigo-50,
+    html.dark .bg-indigo-50\/70 {
+      background-color: rgba(49, 46, 129, 0.32) !important;
+    }
+    html.dark .border-indigo-100,
+    html.dark .border-indigo-200 {
+      border-color: rgba(129, 140, 248, 0.25) !important;
+    }
+    html.dark .text-indigo-950,
+    html.dark .text-indigo-900 {
+      color: #c7d2fe !important;
+    }
+    html.dark .bg-emerald-50,
+    html.dark .bg-emerald-50\/70 {
+      background-color: rgba(6, 78, 59, 0.32) !important;
+    }
+    html.dark .border-emerald-200 {
+      border-color: rgba(52, 211, 153, 0.25) !important;
+    }
+    html.dark .text-emerald-950,
+    html.dark .text-emerald-900 {
+      color: #a7f3d0 !important;
+    }
+    html.dark .bg-amber-50,
+    html.dark .bg-amber-50\/80 {
+      background-color: rgba(120, 53, 15, 0.3) !important;
+    }
+    html.dark .border-amber-200 {
+      border-color: rgba(251, 191, 36, 0.25) !important;
+    }
+    html.dark .text-amber-950,
+    html.dark .text-amber-900 {
+      color: #fde68a !important;
+    }
+    html.dark .bg-rose-50,
+    html.dark .bg-rose-50\/70 {
+      background-color: rgba(136, 19, 55, 0.3) !important;
+    }
+    html.dark .border-rose-200 {
+      border-color: rgba(251, 113, 133, 0.25) !important;
+    }
+    html.dark .text-rose-950,
+    html.dark .text-rose-900 {
+      color: #fecdd3 !important;
+    }
+    html.dark .bg-cyan-50 {
+      background-color: rgba(22, 78, 99, 0.32) !important;
+    }
+    html.dark .border-cyan-200 {
+      border-color: rgba(34, 211, 238, 0.25) !important;
+    }
+    html.dark .text-cyan-950,
+    html.dark .text-cyan-900 {
+      color: #a5f3fc !important;
+    }
+
+    /* Range Slider Styling */
+    input[type="range"] {
+      accent-color: #4f46e5;
+      cursor: pointer;
+    }
+
+    /* Responsive Canvas Container */
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased min-h-screen flex flex-col">
+
+  <!-- ==================== TOP HERO HEADER WITH THEME TOGGLE ==================== -->
+  <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-lg border-b border-indigo-500/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <!-- Left Title & Syllabus Tag -->
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-full bg-indigo-500/30 text-indigo-200 border border-indigo-400/30">
+              Class XI Physics • NCERT Chapter 8
+            </span>
+            <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              Interactive Classroom Module
+            </span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
+            Gravitation: <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-indigo-200 to-amber-200">Field, Potential Energy &amp; Potential</span>
+          </h1>
+          <p class="text-slate-300 text-xs sm:text-sm mt-1 max-w-2xl">
+            Visualizing Gravitational Fields, Integral Derivations, Potential Wells, Solved Numericals &amp; Concept Mastery.
+          </p>
+        </div>
+
+        <!-- Right Side: Light/Dark Theme Switch + Educator Credit Badge -->
+        <div class="flex flex-wrap items-center gap-3 self-start lg:self-center">
+          <!-- Dark / Light Theme Toggle Switch -->
+          <button id="themeToggleBtn" onclick="toggleTheme()" type="button" aria-label="Toggle Dark or Light Theme"
+            class="flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white transition-all shadow-md cursor-pointer select-none">
+            <!-- Sun Icon (shown in Dark Mode to switch to Light) -->
+            <svg id="iconSun" class="w-5 h-5 text-amber-300 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <!-- Moon Icon (shown in Light Mode to switch to Dark) -->
+            <svg id="iconMoon" class="w-5 h-5 text-sky-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <div class="text-left">
+              <span id="themeToggleText" class="text-xs font-bold tracking-wide block">Dark Mode</span>
+              <span class="text-[10px] text-indigo-200 block leading-tight">Switch Theme</span>
+            </div>
+            <!-- Pill Switch Indicator -->
+            <div class="w-9 h-5 rounded-full bg-slate-800/80 border border-white/20 p-0.5 flex items-center">
+              <div id="themeSwitchKnob" class="w-3.5 h-3.5 rounded-full bg-amber-300 transition-transform duration-200 translate-x-0"></div>
+            </div>
+          </button>
+
+          <!-- Educator Credit Badge -->
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-4 py-2 flex items-center gap-3 shadow-inner">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-slate-950 font-extrabold text-base shadow">
+              HM
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-indigo-200 font-semibold">Created &amp; Curated By</p>
+              <p class="text-xs sm:text-sm font-bold text-white">Hrishikesh M <span class="text-amber-300 font-medium">(PGT Physics)</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== STICKY TAB NAVIGATION BAR ==================== -->
+  <nav class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div id="tabBar" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto tab-scrollbar py-2.5" role="tablist">
+        <button onclick="switchTab(0)" id="tab-btn-0" role="tab" aria-selected="true"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-indigo-600 text-white shadow-md shadow-indigo-200 dark:shadow-none">
+          <span class="w-5 h-5 rounded-full bg-white/25 text-white flex items-center justify-center text-xs">1</span>
+          <span>Gravitational Field ($\vec{E}$)</span>
+        </button>
+
+        <button onclick="switchTab(1)" id="tab-btn-1" role="tab" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs">2</span>
+          <span>Gravitational P.E. ($U$)</span>
+        </button>
+
+        <button onclick="switchTab(2)" id="tab-btn-2" role="tab" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs">3</span>
+          <span>Derivation of $U$</span>
+        </button>
+
+        <button onclick="switchTab(3)" id="tab-btn-3" role="tab" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs">4</span>
+          <span>Gravitational Potential ($V$)</span>
+        </button>
+
+        <button onclick="switchTab(4)" id="tab-btn-4" role="tab" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs">5</span>
+          <span>Derivations &amp; Relations</span>
+        </button>
+
+        <button onclick="switchTab(5)" id="tab-btn-5" role="tab" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs">6</span>
+          <span>Solved Numericals (5)</span>
+        </button>
+
+        <button onclick="switchTab(6)" id="tab-btn-6" role="tab" aria-selected="false"
+          class="tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs">7</span>
+          <span>Gamified Quiz 🏆</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: GRAVITATIONAL FIELD & FIELD INTENSITY (CONCEPT + SIMULATION) -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-0" class="tab-panel fade-in space-y-6">
+      <!-- Top Concept Banner -->
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-700 dark:text-sky-300 bg-sky-50 px-3 py-1 rounded-full">
+              Section 8.17 – 8.18 • Foundation Concept
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+              What is a Gravitational Field ($\vec{E}$)?
+            </h2>
+          </div>
+          <div class="formula-box-cyan px-5 py-3 rounded-2xl shrink-0">
+            <p class="text-xs font-semibold text-sky-800 dark:text-sky-300 uppercase">Field Intensity Formulas</p>
+            <p class="text-lg sm:text-2xl font-bold text-slate-900">$$\vec{E} = \frac{\vec{F}}{m_0} \quad \text{and} \quad E = \frac{GM}{r^2}$$</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- NCERT Concept & Physical Explanation -->
+          <div class="lg:col-span-7 space-y-4 text-slate-700 leading-relaxed">
+            <div class="p-4 sm:p-5 rounded-2xl bg-sky-50/70 border border-sky-100">
+              <h3 class="font-bold text-sky-950 text-base sm:text-lg mb-1.5 flex items-center gap-2">
+                <span>🌐</span> Concept of Gravitational Field
+              </h3>
+              <p class="text-sm sm:text-base text-slate-800">
+                Newton's law of gravitation tells us that two masses attract each other across empty space without physical contact (<em>action-at-a-distance</em>). To explain how this interaction propagates through space, physics introduces the <strong>Field Concept</strong>:
+              </p>
+              <p class="text-sm sm:text-base text-slate-800 mt-2">
+                <strong>Definition:</strong> The <em>gravitational field</em> of a material body is the three-dimensional space surrounding it within which its gravitational force of attraction can be experienced by any other body. Theoretically, this field extends up to <strong>infinity ($r \to \infty$)</strong>, becoming progressively weaker with distance.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-200">
+                <h4 class="font-bold text-indigo-950 text-sm sm:text-base mb-1">🎯 Gravitational Field Intensity ($\vec{E}$)</h4>
+                <p class="text-xs sm:text-sm text-slate-700">
+                  The strength of the gravitational field at any point is measured by <strong>Gravitational Field Intensity ($\vec{E}$)</strong>, defined as the gravitational force experienced by a <strong>unit test mass ($m_0 = 1\text{ kg}$)</strong> placed at that point:
+                  $$\vec{E} = \lim_{m_0 \to 0} \frac{\vec{F}}{m_0} = -\frac{GM}{r^2}\hat{r}$$
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200">
+                <h4 class="font-bold text-emerald-900 text-sm sm:text-base mb-1">🧭 Gravitational Lines of Force</h4>
+                <p class="text-xs sm:text-sm text-slate-700">
+                  Gravitational fields are visualized using <strong>radial inward field lines</strong> pointing straight toward the centre of the source mass $M$. The <strong>crowding (density)</strong> of lines represents field strength—dense near the surface ($E \propto 1/r^2$) and spreading apart in deep space.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reference Book Box: Dimensions, Units & Key Properties -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950 text-white rounded-2xl p-5 sm:p-6 shadow-md flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-sky-300 border-b border-white/10 pb-2 mb-3 flex items-center gap-2">
+                <span>📐</span> NCERT &amp; Reference Properties of $\vec{E}$
+              </h3>
+              <div class="space-y-2.5 text-xs sm:text-sm">
+                <div class="flex items-center justify-between py-1 border-b border-white/10">
+                  <span class="text-slate-300">Physical Nature</span>
+                  <span class="px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 font-bold">Vector (Radially Inward)</span>
+                </div>
+                <div class="flex items-center justify-between py-1 border-b border-white/10">
+                  <span class="text-slate-300">SI Unit</span>
+                  <span class="font-mono font-bold text-amber-300">$\text{N kg}^{-1}$ or $\text{m s}^{-2}$</span>
+                </div>
+                <div class="flex items-center justify-between py-1 border-b border-white/10">
+                  <span class="text-slate-300">CGS Unit</span>
+                  <span class="font-mono font-bold text-sky-300">$\text{dyn g}^{-1}$ or $\text{cm s}^{-2}$</span>
+                </div>
+                <div class="py-1.5 border-b border-white/10">
+                  <span class="text-slate-300 block mb-1">Dimensional Formula (Ref. Pg 8.21):</span>
+                  <div class="bg-white/10 px-3 py-1.5 rounded-xl font-mono text-emerald-300 text-center">
+                    $$[E] = \frac{[F]}{[m]} = \frac{[MLT^{-2}]}{[M]} = [M^0 L T^{-2}]$$
+                  </div>
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <span class="text-slate-300">Equivalence with $g$</span>
+                  <span class="font-mono font-bold text-indigo-300">$E_{\text{surface}} = \frac{GM}{R^2} = g \approx 9.8\text{ N/kg}$</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/10 text-xs text-sky-200">
+              💡 <strong>Key Insight:</strong> $\vec{E}$ depends <em>only</em> on the source mass $M$ and distance $r$—never on the test mass $m_0$!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE SIMULATION 0: GRAVITATIONAL FIELD LINES & VECTOR PROBE LAB -->
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-7">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800">
+              Interactive Simulation Lab 0
+            </span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">
+              Gravitational Field Lines &amp; Vector Intensity Visualizer
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Drag the yellow <strong>Test Mass ($m_0$)</strong> anywhere in space to inspect the inward <strong>Field Vector ($\vec{E}$)</strong> and <strong>Force Vector ($\vec{F} = m_0\vec{E}$)</strong>, or switch field visualization modes!
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button onclick="setSim0Mode('lines')" id="btnSim0Lines"
+              class="px-3.5 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs sm:text-sm shadow transition">
+              ✳️ Field Lines
+            </button>
+            <button onclick="setSim0Mode('grid')" id="btnSim0Grid"
+              class="px-3.5 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs sm:text-sm transition">
+              🧭 2D Vector Grid
+            </button>
+            <button onclick="setSim0Mode('twobody')" id="btnSim0TwoBody"
+              class="px-3.5 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs sm:text-sm transition">
+              🌗 Earth + Moon Null Point
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+          <!-- Left Interactive Field Canvas -->
+          <div class="lg:col-span-7 bg-slate-950 rounded-2xl p-3 border border-slate-800">
+            <div class="flex flex-wrap justify-between items-center text-xs text-slate-300 px-1 mb-1.5 gap-2">
+              <span class="text-sky-300 font-semibold">🖱️ Drag Test Mass ($m_0$) in Space</span>
+              <div class="flex items-center gap-3 font-mono text-[11px]">
+                <span class="flex items-center gap-1 text-cyan-300"><span class="w-2.5 h-2.5 rounded-full bg-cyan-400 inline-block"></span> $\vec{E}$ (Field)</span>
+                <span class="flex items-center gap-1 text-rose-300"><span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span> $\vec{F} = m_0\vec{E}$</span>
+              </div>
+            </div>
+            <div class="w-full h-72 sm:h-80 relative">
+              <canvas id="sim0Canvas" class="w-full h-full rounded-xl cursor-grab active:cursor-grabbing"></canvas>
+            </div>
+          </div>
+
+          <!-- Right Controls & Inverse-Square Telemetry -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Source Planet Mass ($M / M_E$):</span>
+                  <span id="sim0MassPLabel" class="font-mono text-sky-700 dark:text-sky-300">1.00 M_E (Earth)</span>
+                </div>
+                <input type="range" id="sim0MassPSlider" min="0.5" max="3.0" step="0.1" value="1.0" class="w-full" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Radial Distance ($r / R_E$):</span>
+                  <span id="sim0RLabel" class="font-mono text-indigo-700 dark:text-indigo-300">1.50 R_E</span>
+                </div>
+                <input type="range" id="sim0RSlider" min="1.0" max="4.5" step="0.05" value="1.5" class="w-full" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Test Mass ($m_0$):</span>
+                  <span id="sim0TestMLabel" class="font-mono text-amber-700 dark:text-amber-300">10 kg</span>
+                </div>
+                <input type="range" id="sim0TestMSlider" min="1" max="50" step="1" value="10" class="w-full" />
+              </div>
+            </div>
+
+            <!-- Live Readouts -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3.5 rounded-2xl bg-sky-950 text-white border border-sky-700">
+                <p class="text-[11px] uppercase tracking-wider text-sky-300 font-bold">Field Intensity ($E$)</p>
+                <p id="sim0EVal" class="text-lg sm:text-xl font-extrabold font-mono text-white mt-1">4.36 N/kg</p>
+                <p id="sim0ERatio" class="text-[11px] text-sky-200 mt-0.5">0.44 g₀ (Inverse-Square)</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-rose-950 text-white border border-rose-700">
+                <p class="text-[11px] uppercase tracking-wider text-rose-300 font-bold">Gravitational Force ($F$)</p>
+                <p id="sim0FVal" class="text-lg sm:text-xl font-extrabold font-mono text-amber-300 mt-1">43.6 N</p>
+                <p class="text-[11px] text-rose-200 mt-0.5">Pulls radially inward</p>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-indigo-50 border border-indigo-200 text-xs text-indigo-950 leading-relaxed">
+              <strong>Inverse-Square Law Check:</strong> At $r = 1\,R_E$, $E = 9.8\text{ N/kg}$. Double the distance ($r = 2\,R_E$), and $E$ drops to $\frac{1}{2^2} = \frac{1}{4}$ ($2.45\text{ N/kg}$)!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: GRAVITATIONAL POTENTIAL ENERGY (CONCEPT + SIMULATION)        -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-1" class="tab-panel hidden fade-in space-y-6">
+      <!-- Top Concept Banner -->
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-300 bg-indigo-50 px-3 py-1 rounded-full">
+              Section 8.19 • Core Concept
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+              What is Gravitational Potential Energy ($U$)?
+            </h2>
+          </div>
+          <div class="formula-box-pink px-5 py-3 rounded-2xl shrink-0">
+            <p class="text-xs font-semibold text-pink-800 dark:text-pink-300 uppercase">Key NCERT Formula</p>
+            <p class="text-xl sm:text-2xl font-bold text-slate-900">$$U = -\frac{GMm}{r}$$</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Theory & NCERT Definitions -->
+          <div class="lg:col-span-7 space-y-4 text-slate-700 leading-relaxed">
+            <div class="p-4 sm:p-5 rounded-2xl bg-indigo-50/70 border border-indigo-100">
+              <h3 class="font-bold text-indigo-950 text-base sm:text-lg mb-1.5 flex items-center gap-2">
+                <span>📘</span> NCERT Definition
+              </h3>
+              <p class="text-sm sm:text-base text-slate-800">
+                When two bodies are placed close to one another, they interact through the gravitational force and possess <strong>mutual gravitational potential energy</strong>.
+              </p>
+              <p class="text-sm sm:text-base text-slate-800 mt-2">
+                <em>"The gravitational potential energy of a body is the energy associated with it due to its position in the gravitational field of another body and is measured by the amount of work done in bringing a body from <strong>infinity</strong> to a given point in the gravitational field of the other."</em>
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200">
+                <h4 class="font-bold text-amber-900 text-sm sm:text-base mb-1">🎯 Zero Level of Potential Energy</h4>
+                <p class="text-xs sm:text-sm text-slate-700">
+                  When one body lies at <strong>infinity ($r = \infty$)</strong> from another, the gravitational force on it is zero ($F \to 0$). Consequently, its potential energy is chosen as <strong>zero ($U = 0$)</strong>. This reference is called the <em>zero level of potential energy</em>.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-200">
+                <h4 class="font-bold text-rose-900 text-sm sm:text-base mb-1">➖ Why is $U$ Always Negative?</h4>
+                <p class="text-xs sm:text-sm text-slate-700">
+                  Gravitational force is purely <strong>attractive</strong>. As a body approaches Earth from $\infty$, work is done <em>by</em> the gravitational field itself. Mutual energy is expended, so $U$ drops below zero ($U &lt; 0$), indicating a <strong>bound system</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Life Connections Card -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-2xl p-5 sm:p-6 shadow-md flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2 mb-3">
+                <span>🌍</span> Real-Life Connections
+              </h3>
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-200">
+                <li class="flex items-start gap-2.5">
+                  <span class="px-2 py-0.5 rounded bg-indigo-500/30 text-indigo-200 font-bold">1</span>
+                  <div>
+                    <strong class="text-white">Rockets &amp; Escape Velocity:</strong> A rocket on Earth sits deep inside a negative potential well ($U = -GMm/R$). Thrusters must supply positive kinetic energy equal to $+GMm/R$ so total energy reaches $0$ at infinity!
+                  </div>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/30 text-emerald-200 font-bold">2</span>
+                  <div>
+                    <strong class="text-white">Hydroelectric Power Dams:</strong> Water stored at height $h$ has higher gravitational P.E. ($\Delta U \approx mgh$). Falling water converts this $\Delta U$ into kinetic and electrical energy.
+                  </div>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="px-2 py-0.5 rounded bg-amber-500/30 text-amber-200 font-bold">3</span>
+                  <div>
+                    <strong class="text-white">Bound Planetary &amp; Satellite Orbits:</strong> Planets remain bound to the Sun and satellites orbit Earth because their total mechanical energy ($E = K + U &lt; 0$) stays negative.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/10 text-xs text-indigo-200 flex items-center justify-between">
+              <span>SI Unit: <strong>Joule (J)</strong></span>
+              <span>Dimensions: <strong>$[M^1 L^2 T^{-2}]$</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE SIMULATION 1: GRAVITATIONAL POTENTIAL WELL & SATELLITE LAB -->
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-7">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+              Interactive Simulation Lab 1
+            </span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">
+              Gravitational Potential Well &amp; Satellite Energy Explorer
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Drag the satellite or adjust sliders to observe how $U(r) = -\frac{GMm}{r}$ approaches $0$ as $r \to \infty$, or release it to watch $U$ convert into Kinetic Energy!
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button onclick="releaseSatelliteDrop()" id="btnDropSat"
+              class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow transition">
+              🚀 Drop in Free Fall
+            </button>
+            <button onclick="resetSim1()"
+              class="px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs sm:text-sm transition">
+              ↺ Reset Orbit
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+          <!-- Canvas Area -->
+          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-950 rounded-2xl p-3 sm:p-4 border border-slate-800">
+            <!-- Left: Orbital Space View -->
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center text-xs text-slate-300 mb-1.5 px-1">
+                <span class="font-semibold text-sky-300">🛰️ Space View (Drag Satellite)</span>
+                <span id="sim1SpaceLabel" class="font-mono text-amber-300">r = 2.0 R_E</span>
+              </div>
+              <div class="w-full h-64 sm:h-72 relative">
+                <canvas id="sim1SpaceCanvas" class="w-full h-full rounded-xl cursor-grab active:cursor-grabbing"></canvas>
+              </div>
+            </div>
+
+            <!-- Right: Potential Well Curve U(r) vs r -->
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center text-xs text-slate-300 mb-1.5 px-1">
+                <span class="font-semibold text-pink-300">📉 Potential Well Curve U(r) vs r</span>
+                <span class="font-mono text-emerald-300">Zero Level at ∞</span>
+              </div>
+              <div class="w-full h-64 sm:h-72 relative">
+                <canvas id="sim1GraphCanvas" class="w-full h-full rounded-xl"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls & Live Telemetry -->
+          <div class="lg:col-span-4 space-y-4">
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Distance from Centre ($r / R_E$):</span>
+                  <span id="sim1RVal" class="font-mono text-indigo-600 dark:text-indigo-300">2.00 R_E</span>
+                </div>
+                <input type="range" id="sim1RSlider" min="1.0" max="6.0" step="0.05" value="2.0" class="w-full" />
+                <div class="flex justify-between text-[10px] text-slate-400 mt-0.5">
+                  <span>Surface ($1 R_E$)</span>
+                  <span>Deep Space ($6 R_E$)</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Satellite Mass ($m$):</span>
+                  <span id="sim1MVal" class="font-mono text-indigo-600 dark:text-indigo-300">500 kg</span>
+                </div>
+                <input type="range" id="sim1MSlider" min="100" max="2000" step="50" value="500" class="w-full" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Planet Mass ($M / M_E$):</span>
+                  <span id="sim1PlanetVal" class="font-mono text-indigo-600 dark:text-indigo-300">1.0 M_E</span>
+                </div>
+                <input type="range" id="sim1PlanetSlider" min="0.5" max="2.5" step="0.1" value="1.0" class="w-full" />
+              </div>
+            </div>
+
+            <!-- Telemetry Cards -->
+            <div class="grid grid-cols-2 gap-2.5 text-xs">
+              <div class="p-3 rounded-xl bg-pink-950 text-white border border-pink-700">
+                <p class="text-pink-300 font-semibold">Potential Energy ($U$)</p>
+                <p id="telemetryU" class="text-base sm:text-lg font-extrabold font-mono text-white mt-0.5">-15.63 GJ</p>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-950 text-white border border-emerald-700">
+                <p class="text-emerald-300 font-semibold">Kinetic Energy ($K$)</p>
+                <p id="telemetryK" class="text-base sm:text-lg font-extrabold font-mono text-white mt-0.5">0.00 GJ</p>
+              </div>
+              <div class="p-3 rounded-xl bg-indigo-950 text-white border border-indigo-700">
+                <p class="text-indigo-300 font-semibold">Total Energy ($E=K+U$)</p>
+                <p id="telemetryE" class="text-base sm:text-lg font-extrabold font-mono text-amber-300 mt-0.5">-15.63 GJ</p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900 text-white border border-slate-700">
+                <p class="text-slate-300 font-semibold">Gravitational Force ($F$)</p>
+                <p id="telemetryF" class="text-base sm:text-lg font-extrabold font-mono text-sky-300 mt-0.5">1226 N</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: STEP-BY-STEP DERIVATION OF GRAVITATIONAL P.E.                -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-2" class="tab-panel hidden fade-in space-y-6">
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="border-b border-slate-100 pb-4 mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-pink-600 dark:text-pink-300 bg-pink-50 dark:bg-pink-950/50 px-3 py-1 rounded-full">
+            Exam Derivation • Reference Q.33 &amp; Fig. 8.22
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+            Expression for Gravitational Potential Energy ($U = -\frac{GMm}{r}$)
+          </h2>
+          <p class="text-sm text-slate-600 mt-1">
+            Step-by-step integral derivation of gravitational P.E. of a body of mass $m$ located at distance $r$ from the centre of the Earth ($r &gt; R$).
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Left Sticky Interactive Diagram (Fig. 8.22 Recreation) -->
+          <div class="lg:col-span-5 bg-slate-50 rounded-2xl p-5 border border-slate-200">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-slate-900 text-sm sm:text-base">📐 Fig. 8.22 Interactive Diagram</h3>
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800">Move Test Mass $A$</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-3">
+              Use the slider below to bring the test mass $m$ from $\infty$ through intermediate point $A$ ($OA = x$) by infinitesimal step $AB = dx$ to target point $P$ ($OP = r$).
+            </p>
+
+            <!-- Interactive SVG Diagram -->
+            <div class="bg-white rounded-xl border border-slate-200 p-2 shadow-inner">
+              <svg id="derivationSvg" viewBox="0 0 320 420" class="w-full max-w-xs mx-auto h-auto select-none">
+                <defs>
+                  <radialGradient id="earthGrad" cx="40%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#f472b6" />
+                    <stop offset="55%" stop-color="#db2777" />
+                    <stop offset="100%" stop-color="#831843" />
+                  </radialGradient>
+                  <marker id="arrowBlack" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L7,3 z" fill="#334155" />
+                  </marker>
+                  <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L7,3 z" fill="#2563eb" />
+                  </marker>
+                  <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L7,3 z" fill="#dc2626" />
+                  </marker>
+                </defs>
+
+                <!-- Vertical Axis from O to Infinity -->
+                <line x1="145" y1="355" x2="145" y2="55" stroke="#334155" stroke-width="2" />
+                <line x1="145" y1="55" x2="145" y2="25" stroke="#64748b" stroke-width="2" stroke-dasharray="4,4" />
+                <text x="145" y="18" text-anchor="middle" font-size="16" font-weight="bold" fill="#334155">∞</text>
+
+                <!-- Earth Sphere -->
+                <circle cx="145" cy="355" r="52" fill="url(#earthGrad)" fill-opacity="0.25" stroke="#be185d" stroke-width="2.5" />
+                <circle cx="145" cy="355" r="3.5" fill="#1e293b" />
+                <text x="132" y="362" font-size="13" font-weight="bold" fill="#1e293b">O</text>
+                <text x="145" y="393" text-anchor="middle" font-size="13" font-weight="bold" fill="#9d174d">Earth (Mass M)</text>
+
+                <!-- Radius R line -->
+                <line x1="145" y1="355" x2="195" y2="342" stroke="#1e293b" stroke-width="1.5" stroke-dasharray="3,2" />
+                <text x="167" y="340" font-size="12" font-weight="bold" fill="#1e293b">R</text>
+
+                <!-- Point P (Target at distance r) -->
+                <circle cx="145" cy="235" r="4.5" fill="#0f172a" />
+                <text x="155" y="239" font-size="13" font-weight="bold" fill="#0f172a">P (Target)</text>
+
+                <!-- Distance r dimension bracket (from O=355 to P=235) -->
+                <line x1="115" y1="355" x2="115" y2="235" stroke="#2563eb" stroke-width="1.5" marker-start="url(#arrowBlue)" marker-end="url(#arrowBlue)" />
+                <line x1="110" y1="235" x2="145" y2="235" stroke="#93c5fd" stroke-width="1" stroke-dasharray="2,2" />
+                <text x="103" y="298" text-anchor="end" font-size="13" font-weight="bold" fill="#1d4ed8">r</text>
+
+                <!-- Dynamic Point A & B Group (Controlled by Slider) -->
+                <g id="svgPointAGroup" transform="translate(0, 0)">
+                  <!-- Point A -->
+                  <circle cx="145" cy="100" r="6" fill="#f59e0b" stroke="#78350f" stroke-width="1.5" />
+                  <text x="157" y="104" font-size="13" font-weight="bold" fill="#b45309">A (mass m)</text>
+
+                  <!-- Force F arrow pointing downward toward Earth -->
+                  <line x1="145" y1="108" x2="145" y2="142" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)" />
+                  <text x="154" y="132" font-size="11" font-weight="bold" fill="#dc2626">F = GMm/x²</text>
+
+                  <!-- Point B at dx below A -->
+                  <circle cx="145" cy="155" r="4" fill="#4f46e5" />
+                  <text x="157" y="159" font-size="13" font-weight="bold" fill="#3730a3">B</text>
+
+                  <!-- dx bracket on left -->
+                  <line x1="125" y1="100" x2="125" y2="155" stroke="#4f46e5" stroke-width="1.5" marker-end="url(#arrowBlue)" />
+                  <line x1="120" y1="100" x2="145" y2="100" stroke="#cbd5e1" stroke-width="1" />
+                  <line x1="120" y1="155" x2="145" y2="155" stroke="#cbd5e1" stroke-width="1" />
+                  <text x="116" y="131" text-anchor="end" font-size="12" font-weight="bold" fill="#4338ca">dx</text>
+                </g>
+
+                <!-- Dynamic Distance x bracket on right (from O=355 to A) -->
+                <line id="svgXLine" x1="235" y1="355" x2="235" y2="100" stroke="#059669" stroke-width="1.5" marker-start="url(#arrowBlack)" marker-end="url(#arrowBlack)" />
+                <line id="svgXTopTick" x1="145" y1="100" x2="242" y2="100" stroke="#6ee7b7" stroke-width="1" stroke-dasharray="3,2" />
+                <line x1="145" y1="355" x2="242" y2="355" stroke="#6ee7b7" stroke-width="1" stroke-dasharray="3,2" />
+                <text id="svgXLabel" x="245" y="230" font-size="13" font-weight="bold" fill="#047857">x</text>
+              </svg>
+            </div>
+
+            <!-- Interactive Position Slider for Point A -->
+            <div class="mt-3 bg-white p-3 rounded-xl border border-slate-200">
+              <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                <span>Position of Body $A$ ($x$):</span>
+                <span id="derivXStatus" class="text-indigo-600 dark:text-indigo-300 font-mono">x = 3.2 R (Approaching P)</span>
+              </div>
+              <input type="range" id="derivSlider" min="0" max="100" value="35" class="w-full" />
+              <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                <span>At Infinity ($x = \infty$)</span>
+                <span>At Target $P$ ($x = r$)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Step-by-Step Mathematical Derivation -->
+          <div class="lg:col-span-7 space-y-4">
+            <!-- Step 1 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-bold text-sm flex items-center justify-center">1</span>
+                <h4 class="font-bold text-slate-900 text-base">Setup &amp; Instantaneous Gravitational Force</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Suppose the Earth is a uniform sphere of mass $M$ and radius $R$. We wish to calculate the potential energy of a body of mass $m$ located at point $P$ such that $OP = r$ ($r &gt; R$).
+                Suppose at any instant the body is at point $A$ at distance $OA = x$. By Newton's Law of Gravitation, the attractive force on the body at $A$ is:
+              </p>
+              <div class="mt-2 py-2 px-4 rounded-xl bg-white border border-slate-200 text-center font-bold text-slate-900">
+                $$F = \frac{GMm}{x^2}$$
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-bold text-sm flex items-center justify-center">2</span>
+                <h4 class="font-bold text-slate-900 text-base">Small Work Done for Infinitesimal Displacement ($dx$)</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Since the force $F$ varies inversely with $x^2$, it cannot be treated as constant over large distances. However, over a very small displacement $AB = dx$ towards Earth, $F$ remains practically constant. The small work done $dW$ is:
+              </p>
+              <div class="mt-2 py-2 px-4 rounded-xl bg-white border border-slate-200 text-center font-bold text-slate-900">
+                $$dW = F \, dx = \frac{GMm}{x^2} \, dx$$
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-bold text-sm flex items-center justify-center">3</span>
+                <h4 class="font-bold text-slate-900 text-base">Integrating from Infinity ($x = \infty$) to Point $P$ ($x = r$)</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                The total work done $W$ in bringing the body from infinity ($x = \infty$) to point $P$ ($x = r$) is obtained by integrating $dW$ between limits $x = \infty$ and $x = r$:
+              </p>
+              <div class="mt-2 py-3 px-4 rounded-xl bg-white border border-slate-200 text-slate-900 overflow-x-auto">
+                $$W = \int dW = \int_{\infty}^{r} \frac{GMm}{x^2} \, dx = GMm \int_{\infty}^{r} x^{-2} \, dx$$
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-indigo-600 text-white font-bold text-sm flex items-center justify-center">4</span>
+                <h4 class="font-bold text-slate-900 text-base">Evaluating the Definite Integral</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Using the standard power rule $\int x^{-2} \, dx = \frac{x^{-2+1}}{-2+1} = -\frac{1}{x}$ and noting that $\frac{1}{\infty} = 0$:
+              </p>
+              <div class="mt-2 py-3 px-4 rounded-xl bg-white border border-slate-200 text-slate-900 overflow-x-auto">
+                $$W = GMm \left[ -\frac{1}{x} \right]_{\infty}^{r} = -GMm \left[ \frac{1}{r} - \frac{1}{\infty} \right] = -\frac{GMm}{r}$$
+              </div>
+            </div>
+
+            <!-- Step 5: Final Boxed Result -->
+            <div class="formula-box-pink p-5 rounded-2xl">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-7 h-7 rounded-lg bg-pink-600 text-white font-bold text-sm flex items-center justify-center">5</span>
+                <h4 class="font-bold text-pink-950 dark:text-pink-200 text-base">Final NCERT Expression for Gravitational Potential Energy</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-800 mb-2">
+                By definition, this work done is stored as the gravitational potential energy $U$ of the body of mass $m$ at distance $r$ from the centre of the Earth:
+              </p>
+              <div class="text-center text-lg sm:text-xl font-extrabold text-slate-900 py-1">
+                $$U = -\frac{GMm}{r} \qquad \cdots (i)$$
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 IMPORTANT POINTS FROM REFERENCE BOOK (PAGE 8.22) -->
+        <div class="mt-8 pt-6 border-t border-slate-200">
+          <h3 class="text-xl font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+            <span>📌</span> Four Important NCERT Deductions (Reference Page 8.22)
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Point 1 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-rose-50/70 border border-rose-200">
+              <span class="text-xs font-bold uppercase text-rose-700 dark:text-rose-300">Point 1 • Significance of Negative Sign</span>
+              <p class="text-xs sm:text-sm text-slate-800 mt-1.5 leading-relaxed">
+                The negative sign in equation $(i)$ indicates that the potential energy is due to <strong>gravitational attraction</strong> between the Earth and the body. When the body is brought from infinity to distance $r$, work is done <em>by</em> the gravitational force of attraction. As mutual energy of the two bodies is expended, their energy reduces by this amount.
+              </p>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200">
+              <span class="text-xs font-bold uppercase text-amber-800 dark:text-amber-300">Point 2 • Variation with Distance $r$</span>
+              <p class="text-xs sm:text-sm text-slate-800 mt-1.5 leading-relaxed">
+                As the distance $r$ increases, the magnitude $\frac{GMm}{r}$ becomes smaller, which means the negative value becomes less negative—so <strong>gravitational P.E. increases</strong> until it reaches zero (its <strong>maximum value</strong>) at $r = \infty$.
+              </p>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-indigo-50/70 border border-indigo-200">
+              <span class="text-xs font-bold uppercase text-indigo-800 dark:text-indigo-300">Point 3 • Change in P.E. Between $r_1$ and $r_2$</span>
+              <p class="text-xs sm:text-sm text-slate-800 mt-1.5 leading-relaxed">
+                If a body of mass $m$ is moved from distance $r_1$ to $r_2$, the change in potential energy is:
+                $$\Delta U = \int_{r_1}^{r_2} \frac{GMm}{x^2} \, dx = GMm \left[ -\frac{1}{x} \right]_{r_1}^{r_2} = GMm \left[ \frac{1}{r_1} - \frac{1}{r_2} \right]$$
+                If $r_1 &gt; r_2$, then $\Delta U$ is <strong>negative</strong> (P.E. decreases when brought closer to Earth).
+              </p>
+            </div>
+
+            <!-- Point 4: Derivation of Delta U = mgh -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200">
+              <span class="text-xs font-bold uppercase text-emerald-800 dark:text-emerald-300">Point 4 • Reduction to $\Delta U = mgh$ near Surface</span>
+              <p class="text-xs sm:text-sm text-slate-800 mt-1.5 leading-relaxed">
+                Moving from surface ($r_1 = R$) to height $h$ ($r_2 = R + h$):
+                $$\Delta U = GMm \left[ \frac{1}{R} - \frac{1}{R+h} \right] = \frac{GMm}{R} \left[ 1 - \left(1 + \frac{h}{R}\right)^{-1} \right]$$
+                Applying Binomial Theorem for $h \ll R$, $(1 + \frac{h}{R})^{-1} \approx 1 - \frac{h}{R}$:
+                $$\Delta U = \frac{GMm}{R}\left[1 - \left(1 - \frac{h}{R}\right)\right] = \frac{GMmh}{R^2} = mgh \quad \left(\because g = \frac{GM}{R^2}\right)$$
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: GRAVITATIONAL POTENTIAL (CONCEPT + SIMULATION)               -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-3" class="tab-panel hidden fade-in space-y-6">
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300 bg-cyan-50 px-3 py-1 rounded-full">
+              Section 8.20 • Reference Q.34
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+              Gravitational Potential ($V$)
+            </h2>
+          </div>
+          <div class="formula-box-cyan px-5 py-3 rounded-2xl shrink-0">
+            <p class="text-xs font-semibold text-cyan-900 dark:text-cyan-300 uppercase">Defining Formula</p>
+            <p class="text-xl sm:text-2xl font-bold text-slate-900">$$V = \frac{\text{Work done}}{\text{Mass}} = \frac{W}{m} = -\frac{GM}{r}$$</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left Concept Explanation -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="p-5 rounded-2xl bg-cyan-50/70 border border-cyan-200">
+              <h3 class="font-bold text-cyan-950 text-base sm:text-lg mb-2">📘 NCERT Definition of Gravitational Potential</h3>
+              <p class="text-sm sm:text-base text-slate-800 leading-relaxed">
+                <strong>1. Energy Perspective:</strong> The gravitational potential at a point is the <em>potential energy associated with a unit mass ($1\text{ kg}$)</em> due to its position in the gravitational field of another body.
+              </p>
+              <p class="text-sm sm:text-base text-slate-800 leading-relaxed mt-2">
+                <strong>2. Work Perspective:</strong> The gravitational potential at a point in the gravitational field of a body is defined as the <em>amount of work done in bringing a body of unit mass from infinity to that point</em>.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <h4 class="font-bold text-slate-900 text-base mb-2">💡 Why Do Physicists Define $V$ Separately from $U$?</h4>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                Gravitational Potential Energy ($U = -GMm/r$) depends on <em>both</em> the planet ($M$) and the test object ($m$). By dividing out $m$, <strong>Gravitational Potential ($V = -GM/r$)</strong> becomes a pure property of the <strong>source gravitational field alone</strong>! Once you know the potential map $V(r)$ around a planet, you can instantly find the potential energy of <em>any</em> satellite of mass $m$ simply by multiplying $U = mV$.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Physical Properties Card -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-cyan-950 via-slate-900 to-indigo-950 text-white rounded-2xl p-5 sm:p-6 shadow-md">
+            <h3 class="text-lg font-bold text-cyan-300 mb-4 border-b border-white/10 pb-2">
+              📊 Physical Quantities, Units &amp; Dimensions
+            </h3>
+            <div class="space-y-3 text-xs sm:text-sm">
+              <div class="flex justify-between items-center py-1.5 border-b border-white/10">
+                <span class="text-slate-300">Physical Nature</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold">Scalar Quantity</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5 border-b border-white/10">
+                <span class="text-slate-300">SI Unit</span>
+                <span class="font-mono font-bold text-amber-300">$\text{J kg}^{-1}$ (Joule per kg)</span>
+              </div>
+              <div class="flex justify-between items-center py-1.5 border-b border-white/10">
+                <span class="text-slate-300">CGS Unit</span>
+                <span class="font-mono font-bold text-cyan-300">$\text{erg g}^{-1}$</span>
+              </div>
+              <div class="py-1.5 border-b border-white/10">
+                <span class="text-slate-300 block mb-1">Dimensional Formula:</span>
+                <div class="bg-white/10 px-3 py-2 rounded-xl font-mono text-center text-amber-200">
+                  $$[V] = \frac{[W]}{[m]} = \frac{[ML^2T^{-2}]}{[M]} = [M^0 L^2 T^{-2}]$$
+                </div>
+              </div>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-slate-300">Value at Infinity ($r = \infty$)</span>
+                <span class="font-mono font-bold text-white">$V_{\infty} = 0$ (Maximum)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE SIMULATION 2: EQUIPOTENTIAL SURFACES & PROBE INVARIANCE LAB -->
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-7">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-100 text-cyan-800">
+              Interactive Simulation Lab 2
+            </span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">
+              Equipotential Contours &amp; Probe Mass Invariance Lab
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Drag the yellow probe across concentric <strong>Equipotential Surfaces</strong>. Change the Probe Mass ($m_0$) to verify that <strong>$V$ stays unchanged</strong> while $U = m_0 V$ scales linearly!
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="toggleTwoBodyMode()" id="btnTwoBody"
+              class="px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs sm:text-sm transition">
+              🌗 Add Moon (Superposition)
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+          <!-- Interactive Equipotential Canvas -->
+          <div class="lg:col-span-7 bg-slate-950 rounded-2xl p-3 border border-slate-800">
+            <div class="flex justify-between items-center text-xs text-slate-300 px-1 mb-1.5">
+              <span class="text-cyan-300 font-semibold">🖱️ Drag Probe Anywhere in Field</span>
+              <span id="sim2ModeBadge" class="text-amber-300 font-mono">Single Body (Earth)</span>
+            </div>
+            <div class="w-full h-72 sm:h-80 relative">
+              <canvas id="sim2Canvas" class="w-full h-full rounded-xl cursor-grab active:cursor-grabbing"></canvas>
+            </div>
+          </div>
+
+          <!-- Controls & Comparison Readout -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Probe Distance ($r / R_E$):</span>
+                  <span id="sim2RLabel" class="font-mono text-cyan-700 dark:text-cyan-300">2.00 R_E</span>
+                </div>
+                <input type="range" id="sim2RSlider" min="1.0" max="4.5" step="0.05" value="2.0" class="w-full" />
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-700 mb-1">
+                  <span>Test Probe Mass ($m_0$):</span>
+                  <span id="sim2MassLabel" class="font-mono text-indigo-700 dark:text-indigo-300">10 kg</span>
+                </div>
+                <input type="range" id="sim2MassSlider" min="1" max="100" step="1" value="10" class="w-full" />
+                <p class="text-[11px] text-slate-500 mt-1">
+                  Notice: Changing $m_0$ alters $U$, but leaves $V$ completely constant!
+                </p>
+              </div>
+            </div>
+
+            <!-- Side-by-side V vs U cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-4 rounded-2xl bg-cyan-950 text-white border border-cyan-700">
+                <p class="text-xs uppercase tracking-wider text-cyan-300 font-bold">Gravitational Potential ($V$)</p>
+                <p id="sim2VReadout" class="text-xl font-extrabold font-mono text-white mt-1">-31.28 MJ/kg</p>
+                <p class="text-[11px] text-cyan-200 mt-1">Independent of probe mass $m_0$</p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-indigo-950 text-white border border-indigo-700">
+                <p class="text-xs uppercase tracking-wider text-indigo-300 font-bold">Potential Energy ($U = m_0 V$)</p>
+                <p id="sim2UReadout" class="text-xl font-extrabold font-mono text-amber-300 mt-1">-312.80 MJ</p>
+                <p class="text-[11px] text-indigo-200 mt-1">Proportional to probe mass $m_0$</p>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950">
+              <strong>Classroom Rule:</strong> No work is done in moving a mass along an <em>equipotential circle</em> ($\Delta V = 0 \implies W = m\Delta V = 0$).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: CONNECTED DERIVATIONS & EQUATIONS                            -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-4" class="tab-panel hidden fade-in space-y-6">
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="border-b border-slate-100 pb-4 mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-300 bg-indigo-50 px-3 py-1 rounded-full">
+            Section 8.20 • Reference Q.35 &amp; Connected Relations
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+            Derivations &amp; Inter-Relations of Gravitational Potential
+          </h2>
+        </div>
+
+        <!-- 3 Connected Derivation Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <!-- Card 1: Potential due to Earth -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-cyan-100 text-cyan-800">Derivation A (Q.35)</span>
+              <h3 class="text-lg font-extrabold text-slate-900 mt-2 mb-2">
+                Gravitational Potential at a Point Due to Earth
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+                The work done in bringing a body of mass $m$ from infinity to a point at distance $r$ from the centre of the Earth is:
+                $$W = -\frac{GMm}{r}$$
+                Hence, the gravitational potential due to the Earth at distance $r$ from its centre is:
+                $$V = \frac{W}{m} = -\frac{GM}{r}$$
+              </p>
+            </div>
+            <div class="formula-box-cyan p-3.5 rounded-xl text-center">
+              <p class="text-xs font-bold text-cyan-900 dark:text-cyan-300">At Earth's Surface ($r = R$):</p>
+              <p class="text-base sm:text-lg font-extrabold text-slate-900 mt-0.5">$$V_{\text{surface}} = -\frac{GM}{R} = -gR$$</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Relation between U and V -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-pink-100 text-pink-800">Derivation B (Q.35)</span>
+              <h3 class="text-lg font-extrabold text-slate-900 mt-2 mb-2">
+                Relation Between Gravitational P.E. ($U$) &amp; Potential ($V$)
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+                Comparing the expressions for potential energy $U$ and potential $V$ at distance $r$ from Earth's centre:
+                $$U = -\frac{GMm}{r} = \left( -\frac{GM}{r} \right) \times m$$
+                Therefore, potential energy is the product of mass and gravitational potential:
+              </p>
+            </div>
+            <div class="formula-box-pink p-3.5 rounded-xl text-center">
+              <p class="text-xs font-bold text-pink-900 dark:text-pink-300">Fundamental Bridge Equation:</p>
+              <p class="text-base sm:text-lg font-extrabold text-slate-900 mt-0.5">$$U = m \cdot V \quad \text{and} \quad \Delta U = m \cdot \Delta V$$</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Relation between Field Intensity E and Potential V -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800">Derivation C (NCERT)</span>
+              <h3 class="text-lg font-extrabold text-slate-900 mt-2 mb-2">
+                Relation Between Field Intensity ($E$) &amp; Potential ($V$)
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+                Work done by gravitational force $F = mE$ over small displacement $dr$ is $dW = -m\,dV = mE\,dr$. Differentiating $V = -GM/r$ with respect to $r$:
+                $$\frac{dV}{dr} = \frac{d}{dr}\left(-\frac{GM}{r}\right) = +\frac{GM}{r^2} = -E$$
+              </p>
+            </div>
+            <div class="formula-box-indigo p-3.5 rounded-xl text-center">
+              <p class="text-xs font-bold text-indigo-900 dark:text-indigo-300">Potential Gradient Relation:</p>
+              <p class="text-base sm:text-lg font-extrabold text-slate-900 mt-0.5">$$E = -\frac{dV}{dr}$$</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete Master Comparison Table -->
+        <div class="mb-8">
+          <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-3">
+            📋 Master Summary Table: Field ($\vec{E}$) vs. Potential Energy ($U$) vs. Potential ($V$)
+          </h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-slate-900 text-white">
+                  <th class="p-3.5 font-bold">Property</th>
+                  <th class="p-3.5 font-bold text-sky-300">Gravitational Field ($\vec{E}$)</th>
+                  <th class="p-3.5 font-bold text-pink-300">Gravitational P.E. ($U$)</th>
+                  <th class="p-3.5 font-bold text-cyan-300">Gravitational Potential ($V$)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-700 bg-white">
+                <tr>
+                  <td class="p-3.5 font-bold text-slate-900">Formula (for $r \ge R$)</td>
+                  <td class="p-3.5 font-mono">$E = \frac{GM}{r^2}$ (inward)</td>
+                  <td class="p-3.5 font-mono">$U = -\frac{GMm}{r}$</td>
+                  <td class="p-3.5 font-mono">$V = -\frac{GM}{r}$</td>
+                </tr>
+                <tr class="bg-slate-50/70">
+                  <td class="p-3.5 font-bold text-slate-900">Value at Surface ($r = R$)</td>
+                  <td class="p-3.5 font-mono">$g = \frac{GM}{R^2} \approx 9.8\text{ N/kg}$</td>
+                  <td class="p-3.5 font-mono">$U_{\text{surface}} = -\frac{GMm}{R} = -mgR$</td>
+                  <td class="p-3.5 font-mono">$V_{\text{surface}} = -\frac{GM}{R} = -gR$</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-slate-900">Scalar / Vector</td>
+                  <td class="p-3.5">Vector (radially inward)</td>
+                  <td class="p-3.5">Scalar</td>
+                  <td class="p-3.5">Scalar</td>
+                </tr>
+                <tr class="bg-slate-50/70">
+                  <td class="p-3.5 font-bold text-slate-900">SI Unit &amp; CGS Unit</td>
+                  <td class="p-3.5">$\text{N kg}^{-1}$ ($\text{dyn g}^{-1}$)</td>
+                  <td class="p-3.5">$\text{Joule (J)}$ ($\text{erg}$)</td>
+                  <td class="p-3.5">$\text{J kg}^{-1}$ ($\text{erg g}^{-1}$)</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-slate-900">Dimensional Formula</td>
+                  <td class="p-3.5 font-mono">$[M^0 L^1 T^{-2}]$</td>
+                  <td class="p-3.5 font-mono">$[M^1 L^2 T^{-2}]$</td>
+                  <td class="p-3.5 font-mono">$[M^0 L^2 T^{-2}]$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Interactive Equation Bridge Sandbox -->
+        <div class="bg-gradient-to-r from-indigo-50 to-cyan-50 rounded-2xl p-5 sm:p-6 border border-indigo-200">
+          <h3 class="text-lg font-extrabold text-indigo-950 mb-1">🧮 Interactive Equation Bridge Calculator</h3>
+          <p class="text-xs sm:text-sm text-slate-700 mb-4">
+            Test the equations live! Adjust Earth-radial distance ($r$) and test mass ($m$) to compute $V$, $U = mV$, and $E = -dV/dr$ instantaneously ($GM_E = 3.986 \times 10^{14}\text{ N}\cdot\text{m}^2/\text{kg}$, $R_E = 6.37 \times 10^6\text{ m}$).
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="bg-white p-3.5 rounded-xl border border-indigo-100">
+              <label class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                <span>Distance $r$ (in multiples of $R_E$):</span>
+                <span id="calcRDisp" class="text-indigo-600 dark:text-indigo-300 font-mono">1.00 R_E (Surface)</span>
+              </label>
+              <input type="range" id="calcRInput" min="1" max="10" step="0.25" value="1" class="w-full" />
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-indigo-100">
+              <label class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                <span>Body Mass $m$ (kg):</span>
+                <span id="calcMDisp" class="text-indigo-600 dark:text-indigo-300 font-mono">100 kg</span>
+              </label>
+              <input type="range" id="calcMInput" min="10" max="1000" step="10" value="100" class="w-full" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="bg-white p-3 rounded-xl border border-cyan-200 shadow-sm">
+              <p class="text-[11px] font-bold text-cyan-700 dark:text-cyan-300 uppercase">Potential $V = -GM/r$</p>
+              <p id="outCalcV" class="text-sm sm:text-base font-extrabold font-mono text-slate-900 mt-1">-62.57 MJ/kg</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-pink-200 shadow-sm">
+              <p class="text-[11px] font-bold text-pink-700 dark:text-pink-300 uppercase">P.E. $U = mV$</p>
+              <p id="outCalcU" class="text-sm sm:text-base font-extrabold font-mono text-slate-900 mt-1">-6.26 GJ</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-indigo-200 shadow-sm">
+              <p class="text-[11px] font-bold text-indigo-700 dark:text-indigo-300 uppercase">Field $E = GM/r^2$</p>
+              <p id="outCalcE" class="text-sm sm:text-base font-extrabold font-mono text-slate-900 mt-1">9.82 N/kg</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200 shadow-sm">
+              <p class="text-[11px] font-bold text-emerald-700 dark:text-emerald-300 uppercase">Force $F = mE$</p>
+              <p id="outCalcF" class="text-sm sm:text-base font-extrabold font-mono text-slate-900 mt-1">982 N</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 6: PRACTICE NUMERICALS WITH STEP-BY-STEP SOLUTIONS              -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-5" class="tab-panel hidden fade-in space-y-6">
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 bg-emerald-50 px-3 py-1 rounded-full">
+              CBSE &amp; NCERT Problem Solving
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+              5 Solved Practice Numericals
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">
+              Standard Constants: $G = 6.67 \times 10^{-11}\text{ N}\cdot\text{m}^2\text{ kg}^{-2}$, $M_E = 6.0 \times 10^{24}\text{ kg}$, $R_E = 6.4 \times 10^6\text{ m}$, $g = 9.8\text{ m s}^{-2}$.
+            </p>
+          </div>
+          <button onclick="toggleAllSolutions()" id="btnToggleAllSol"
+            class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm self-start sm:self-center transition">
+            👁️ Expand All Solutions
+          </button>
+        </div>
+
+        <div id="numericalsContainer" class="space-y-5">
+          <!-- Populated cleanly via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 7: GAMIFIED QUIZ SESSION (5 MCQs)                               -->
+    <!-- =================================================================== -->
+    <section id="tab-panel-6" class="tab-panel hidden fade-in space-y-6">
+      <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8 max-w-4xl mx-auto">
+        <!-- Quiz Top Bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 bg-amber-50 px-3 py-1 rounded-full">
+              Classroom Concept Challenge
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+              Gravitation Mastery Quiz 🏆
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button onclick="toggleSound()" id="soundToggleBtn"
+              class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition">
+              🔊 Sound: ON
+            </button>
+            <div class="px-4 py-2 rounded-xl bg-indigo-950 text-white text-xs sm:text-sm font-bold flex items-center gap-3">
+              <span>Score: <span id="quizScoreDisplay" class="text-amber-300 font-mono">0</span> / 50</span>
+              <span class="text-white/30">|</span>
+              <span>Streak: <span id="quizStreakDisplay" class="text-emerald-300 font-mono">0🔥</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mb-6">
+          <div class="flex justify-between text-xs font-bold text-slate-600 mb-1.5">
+            <span id="quizProgressText">Question 1 of 5</span>
+            <span id="quizPercentText">20%</span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div id="quizProgressBar" class="h-full bg-gradient-to-r from-indigo-500 to-pink-500 transition-all duration-300" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <!-- Active Quiz Card -->
+        <div id="quizActiveView" class="space-y-5">
+          <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span id="quizTopicTag" class="text-xs font-bold text-indigo-600 dark:text-indigo-300 uppercase tracking-wider">Concept Check</span>
+            <h3 id="quizQuestionText" class="text-lg sm:text-xl font-bold text-slate-900 mt-1.5 leading-snug">
+              Loading question...
+            </h3>
+          </div>
+
+          <!-- Options Grid -->
+          <div id="quizOptionsGrid" class="grid grid-cols-1 gap-3">
+            <!-- Buttons generated by JS -->
+          </div>
+
+          <!-- Immediate Feedback Explanation Box -->
+          <div id="quizFeedbackBox" class="hidden p-4 sm:p-5 rounded-2xl border text-xs sm:text-sm leading-relaxed">
+            <p id="quizFeedbackTitle" class="font-extrabold text-base mb-1"></p>
+            <p id="quizFeedbackExplanation"></p>
+          </div>
+
+          <!-- Next Question Button -->
+          <div class="flex justify-end pt-2">
+            <button id="quizNextBtn" onclick="nextQuizQuestion()" disabled
+              class="px-6 py-3 rounded-xl bg-indigo-600 disabled:bg-slate-300 dark:disabled:bg-slate-700 disabled:cursor-not-allowed hover:bg-indigo-700 text-white font-bold text-sm shadow transition">
+              Next Question →
+            </button>
+          </div>
+        </div>
+
+        <!-- Final Results View -->
+        <div id="quizResultView" class="hidden text-center py-6 space-y-5">
+          <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-4xl shadow-lg">
+            🏆
+          </div>
+          <div>
+            <span id="quizRankBadge" class="px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-indigo-100 text-indigo-800">
+              Astrophysics Ace
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+              Quiz Completed!
+            </h3>
+            <p id="quizFinalScoreText" class="text-base sm:text-lg text-slate-600 mt-1">
+              You scored 50 out of 50 points!
+            </p>
+          </div>
+
+          <div class="max-w-md mx-auto p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700">
+            <p id="quizSummaryMessage"></p>
+          </div>
+
+          <button onclick="restartQuiz()"
+            class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md transition">
+            🔄 Retake Quiz Challenge
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER WITH CREATION CREDITS ==================== -->
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        <span>Class 11 Physics (NCERT) • Chapter 8: Gravitation Interactive E-Book</span>
+      </div>
+      <div class="text-center sm:text-right">
+        <span class="text-slate-400">Designed &amp; Developed for Classroom Teaching by </span>
+        <strong class="text-amber-300 font-bold">Hrishikesh M (PGT Physics)</strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT LOGIC & SIMULATIONS ==================== -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 0. LIGHT / DARK THEME TOGGLE CONTROLLER
+    // -------------------------------------------------------------------------
+    let isDarkTheme = false;
+
+    function toggleTheme() {
+      isDarkTheme = !isDarkTheme;
+      const htmlEl = document.documentElement;
+      const iconSun = document.getElementById('iconSun');
+      const iconMoon = document.getElementById('iconMoon');
+      const toggleText = document.getElementById('themeToggleText');
+      const switchKnob = document.getElementById('themeSwitchKnob');
+
+      if (isDarkTheme) {
+        htmlEl.classList.remove('light');
+        htmlEl.classList.add('dark');
+        iconSun.classList.remove('hidden');
+        iconMoon.classList.add('hidden');
+        toggleText.textContent = 'Light Mode';
+        switchKnob.style.transform = 'translateX(16px)';
+      } else {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        iconSun.classList.add('hidden');
+        iconMoon.classList.remove('hidden');
+        toggleText.textContent = 'Dark Mode';
+        switchKnob.style.transform = 'translateX(0px)';
+      }
+
+      // Re-style inactive tab buttons to match active theme cleanly
+      switchTab(currentTab);
+    }
+
+    // -------------------------------------------------------------------------
+    // 1. GLOBAL TAB NAVIGATION & KATEX RENDERING
+    // -------------------------------------------------------------------------
+    let currentTab = 0;
+
+    function renderAllMath() {
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
+          throwOnError: false
+        });
+      }
+    }
+
+    function switchTab(index) {
+      currentTab = index;
+      const panels = document.querySelectorAll('.tab-panel');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      panels.forEach((panel, idx) => {
+        if (idx === index) {
+          panel.classList.remove('hidden');
+        } else {
+          panel.classList.add('hidden');
+        }
+      });
+
+      buttons.forEach((btn, idx) => {
+        const badge = btn.querySelector('span:first-child');
+        if (idx === index) {
+          btn.setAttribute('aria-selected', 'true');
+          btn.className =
+            'tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-indigo-600 text-white shadow-md shadow-indigo-200 dark:shadow-none';
+          if (badge) {
+            badge.className =
+              'w-5 h-5 rounded-full bg-white/25 text-white flex items-center justify-center text-xs';
+          }
+        } else {
+          btn.setAttribute('aria-selected', 'false');
+          btn.className =
+            'tab-btn flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800';
+          if (badge) {
+            badge.className =
+              idx === 6
+                ? 'w-5 h-5 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs'
+                : 'w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xs';
+          }
+        }
+      });
+
+      // Resize & redraw canvases when their tabs become visible
+      if (index === 0) {
+        resizeSim0Canvas();
+        drawSim0();
+      } else if (index === 1) {
+        resizeSim1Canvases();
+        drawSim1();
+      } else if (index === 3) {
+        resizeSim2Canvas();
+        drawSim2();
+      }
+      renderAllMath();
+    }
+
+    function resizeCanvasDPR(canvas) {
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      const ctx = canvas.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    // -------------------------------------------------------------------------
+    // 1B. SIMULATION 0: GRAVITATIONAL FIELD & VECTOR INTENSITY LAB (TAB 1)
+    // -------------------------------------------------------------------------
+    let sim0State = {
+      planetMult: 1.0,    // M / M_E
+      rMultiple: 1.5,     // r / R_E
+      probeAngle: -0.52,  // radians
+      testMass: 10,       // kg
+      mode: 'lines',      // 'lines' | 'grid' | 'twobody'
+      dragging: false
+    };
+
+    const sim0Canvas = document.getElementById('sim0Canvas');
+    const sim0MassPSlider = document.getElementById('sim0MassPSlider');
+    const sim0RSlider = document.getElementById('sim0RSlider');
+    const sim0TestMSlider = document.getElementById('sim0TestMSlider');
+
+    function resizeSim0Canvas() {
+      resizeCanvasDPR(sim0Canvas);
+    }
+
+    function setSim0Mode(mode) {
+      sim0State.mode = mode;
+      const modes = [
+        { id: 'btnSim0Lines', key: 'lines' },
+        { id: 'btnSim0Grid', key: 'grid' },
+        { id: 'btnSim0TwoBody', key: 'twobody' }
+      ];
+      modes.forEach((m) => {
+        const btn = document.getElementById(m.id);
+        if (!btn) return;
+        if (m.key === mode) {
+          btn.className = 'px-3.5 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs sm:text-sm shadow transition';
+        } else {
+          btn.className = 'px-3.5 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs sm:text-sm transition';
+        }
+      });
+      drawSim0();
+    }
+
+    function drawArrowHead(ctx, fromX, fromY, toX, toY, headLen, color) {
+      const angle = Math.atan2(toY - fromY, toX - fromX);
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(toX, toY);
+      ctx.lineTo(toX - headLen * Math.cos(angle - Math.PI / 6), toY - headLen * Math.sin(angle - Math.PI / 6));
+      ctx.lineTo(toX - headLen * Math.cos(angle + Math.PI / 6), toY - headLen * Math.sin(angle + Math.PI / 6));
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function drawSim0() {
+      if (!sim0Canvas) return;
+      const rect = sim0Canvas.getBoundingClientRect();
+      const w = rect.width;
+      const h = rect.height;
+      if (w === 0 || h === 0) return;
+      const ctx = sim0Canvas.getContext('2d');
+      ctx.clearRect(0, 0, w, h);
+
+      // Deep space background
+      ctx.fillStyle = '#04091a';
+      ctx.fillRect(0, 0, w, h);
+
+      // Subtle background stars
+      for (let i = 0; i < 30; i++) {
+        const sx = ((i * 89) % 100) * 0.01 * w;
+        const sy = ((i * 53) % 100) * 0.01 * h;
+        ctx.fillStyle = 'rgba(148, 163, 184, 0.35)';
+        ctx.beginPath();
+        ctx.arc(sx, sy, (i % 2) + 0.7, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      const isTwoBody = sim0State.mode === 'twobody';
+      const planetX = isTwoBody ? w * 0.33 : w * 0.5;
+      const planetY = h * 0.5;
+      const planetPxR = 24 + sim0State.planetMult * 4;
+      const scalePxPerR = Math.min(w, h) * 0.155;
+
+      const moonX = w * 0.80;
+      const moonY = h * 0.5;
+
+      // Mode 1: Radial Gravitational Field Lines
+      if (sim0State.mode === 'lines' || isTwoBody) {
+        const numLines = Math.round(12 * Math.sqrt(sim0State.planetMult));
+        const maxLen = Math.max(w, h) * 0.65;
+        for (let i = 0; i < numLines; i++) {
+          const ang = (i / numLines) * Math.PI * 2;
+          const startX = planetX + Math.cos(ang) * (planetPxR + 3);
+          const startY = planetY + Math.sin(ang) * (planetPxR + 3);
+          const endX = planetX + Math.cos(ang) * maxLen;
+          const endY = planetY + Math.sin(ang) * maxLen;
+
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.28)';
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.moveTo(endX, endY);
+          ctx.lineTo(startX, startY);
+          ctx.stroke();
+
+          // Inward arrowheads along each field line
+          [0.32, 0.62].forEach((frac) => {
+            const ax = planetX + Math.cos(ang) * (planetPxR + frac * (Math.min(w, h) * 0.45));
+            const ay = planetY + Math.sin(ang) * (planetPxR + frac * (Math.min(w, h) * 0.45));
+            const tx = planetX + Math.cos(ang) * (planetPxR + frac * (Math.min(w, h) * 0.45) - 10);
+            const ty = planetY + Math.sin(ang) * (planetPxR + frac * (Math.min(w, h) * 0.45) - 10);
+            drawArrowHead(ctx, ax, ay, tx, ty, 6, 'rgba(56, 189, 248, 0.65)');
+          });
+        }
+      }
+
+      // Mode 2: 2D Vector Field Grid
+      if (sim0State.mode === 'grid') {
+        const step = 38;
+        for (let gx = 24; gx < w - 16; gx += step) {
+          for (let gy = 24; gy < h - 16; gy += step) {
+            const dx = planetX - gx;
+            const dy = planetY - gy;
+            const dist = Math.hypot(dx, dy);
+            if (dist < planetPxR + 10) continue;
+            const rNorm = dist / scalePxPerR;
+            const mag = Math.min(22, Math.max(5, (14 * sim0State.planetMult) / (rNorm * rNorm)));
+            const ux = dx / dist;
+            const uy = dy / dist;
+            const ex = gx + ux * mag;
+            const ey = gy + uy * mag;
+
+            ctx.strokeStyle = 'rgba(34, 211, 238, 0.55)';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(gx, gy);
+            ctx.lineTo(ex, ey);
+            ctx.stroke();
+            drawArrowHead(ctx, gx, gy, ex, ey, 4.5, 'rgba(34, 211, 238, 0.85)');
+          }
+        }
+      }
+
+      // Draw Source Planet
+      const glow = ctx.createRadialGradient(planetX, planetY, planetPxR * 0.5, planetX, planetY, planetPxR * 1.7);
+      glow.addColorStop(0, 'rgba(56, 189, 248, 0.45)');
+      glow.addColorStop(1, 'rgba(56, 189, 248, 0)');
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(planetX, planetY, planetPxR * 1.7, 0, Math.PI * 2);
+      ctx.fill();
+
+      const pGrad = ctx.createRadialGradient(planetX - 6, planetY - 6, 4, planetX, planetY, planetPxR);
+      pGrad.addColorStop(0, '#7dd3fc');
+      pGrad.addColorStop(0.6, '#0284c7');
+      pGrad.addColorStop(1, '#1e3a8a');
+      ctx.fillStyle = pGrad;
+      ctx.beginPath();
+      ctx.arc(planetX, planetY, planetPxR, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 11px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(`M = ${sim0State.planetMult.toFixed(1)}M_E`, planetX, planetY + 4);
+
+      // Optional Moon + Null Point in Two-Body Mode
+      if (isTwoBody) {
+        for (let i = 0; i < 8; i++) {
+          const ang = (i / 8) * Math.PI * 2;
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.25)';
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(moonX + Math.cos(ang) * 16, moonY + Math.sin(ang) * 16);
+          ctx.lineTo(moonX + Math.cos(ang) * 65, moonY + Math.sin(ang) * 65);
+          ctx.stroke();
+        }
+
+        ctx.fillStyle = '#cbd5e1';
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, 13, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#0f172a';
+        ctx.font = 'bold 9px Inter, sans-serif';
+        ctx.fillText('Moon', moonX, moonY + 3);
+
+        // Approximate Null Point marker (E_net = 0)
+        const nullX = planetX + (moonX - planetX) * 0.85;
+        ctx.strokeStyle = '#34d399';
+        ctx.setLineDash([3, 3]);
+        ctx.beginPath();
+        ctx.arc(nullX, planetY, 7, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#6ee7b7';
+        ctx.font = 'bold 10px JetBrains Mono, monospace';
+        ctx.fillText('Null Point (E_net ≈ 0)', nullX, planetY - 13);
+      }
+
+      // Compute Probe Coordinates & Net Field Vector
+      const probeDistPx = sim0State.rMultiple * scalePxPerR;
+      const probeX = planetX + Math.cos(sim0State.probeAngle) * probeDistPx;
+      const probeY = planetY + Math.sin(sim0State.probeAngle) * probeDistPx;
+
+      // Earth Field Vector at probe (in N/kg)
+      const g0 = 9.81;
+      const E_earthMag = (g0 * sim0State.planetMult) / (sim0State.rMultiple * sim0State.rMultiple);
+      let Ex = -Math.cos(sim0State.probeAngle) * E_earthMag;
+      let Ey = -Math.sin(sim0State.probeAngle) * E_earthMag;
+
+      if (isTwoBody) {
+        const dxM = (moonX - probeX) / scalePxPerR;
+        const dyM = (moonY - probeY) / scalePxPerR;
+        const rM = Math.max(0.4, Math.hypot(dxM, dyM));
+        const E_moonMag = (g0 * 0.04) / (rM * rM);
+        Ex += (dxM / rM) * E_moonMag;
+        Ey += (dyM / rM) * E_moonMag;
+      }
+
+      const E_net = Math.hypot(Ex, Ey);
+      const F_net = E_net * sim0State.testMass;
+
+      // Draw Field Vector E (Cyan Arrow) from probe
+      if (E_net > 0.05) {
+        const ux = Ex / E_net;
+        const uy = Ey / E_net;
+        const eArrowLen = Math.min(62, Math.max(18, E_net * 6.5));
+        const eTipX = probeX + ux * eArrowLen;
+        const eTipY = probeY + uy * eArrowLen;
+
+        ctx.strokeStyle = '#22d3ee';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(probeX, probeY);
+        ctx.lineTo(eTipX, eTipY);
+        ctx.stroke();
+        drawArrowHead(ctx, probeX, probeY, eTipX, eTipY, 8, '#22d3ee');
+
+        // Draw Force Vector F = m0 * E (Rose Arrow, offset slightly)
+        const fArrowLen = Math.min(82, Math.max(22, eArrowLen * (0.85 + sim0State.testMass / 65)));
+        const perpX = -uy * 5;
+        const perpY = ux * 5;
+        const fStartX = probeX + perpX;
+        const fStartY = probeY + perpY;
+        const fTipX = fStartX + ux * fArrowLen;
+        const fTipY = fStartY + uy * fArrowLen;
+
+        ctx.strokeStyle = '#f43f5e';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(fStartX, fStartY);
+        ctx.lineTo(fTipX, fTipY);
+        ctx.stroke();
+        drawArrowHead(ctx, fStartX, fStartY, fTipX, fTipY, 7, '#f43f5e');
+      }
+
+      // Draw Test Mass Node
+      ctx.fillStyle = '#fbbf24';
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.arc(probeX, probeY, 8, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#fef08a';
+      ctx.font = 'bold 11px JetBrains Mono, monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText(`m₀ = ${sim0State.testMass}kg`, probeX, probeY - 13);
+
+      // Update DOM Telemetry Readouts
+      document.getElementById('sim0MassPLabel').textContent = `${sim0State.planetMult.toFixed(1)} M_E`;
+      document.getElementById('sim0RLabel').textContent = `${sim0State.rMultiple.toFixed(2)} R_E`;
+      document.getElementById('sim0TestMLabel').textContent = `${sim0State.testMass} kg`;
+
+      document.getElementById('sim0EVal').textContent = `${E_net.toFixed(2)} N/kg`;
+      document.getElementById('sim0ERatio').textContent = `${(E_net / g0).toFixed(2)} g₀ (E ∝ 1/r²)`;
+      document.getElementById('sim0FVal').textContent = `${F_net.toFixed(1)} N`;
+    }
+
+    function handleSim0Pointer(clientX, clientY) {
+      const rect = sim0Canvas.getBoundingClientRect();
+      const px = clientX - rect.left;
+      const py = clientY - rect.top;
+      const planetX = sim0State.mode === 'twobody' ? rect.width * 0.33 : rect.width * 0.5;
+      const planetY = rect.height * 0.5;
+      const scalePxPerR = Math.min(rect.width, rect.height) * 0.155;
+
+      const dx = px - planetX;
+      const dy = py - planetY;
+      const dist = Math.hypot(dx, dy);
+      sim0State.rMultiple = Math.max(1.0, Math.min(4.5, dist / scalePxPerR));
+      sim0State.probeAngle = Math.atan2(dy, dx);
+      sim0RSlider.value = sim0State.rMultiple.toFixed(2);
+      drawSim0();
+    }
+
+    sim0Canvas.addEventListener('mousedown', (e) => {
+      sim0State.dragging = true;
+      handleSim0Pointer(e.clientX, e.clientY);
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (sim0State.dragging) handleSim0Pointer(e.clientX, e.clientY);
+    });
+    window.addEventListener('mouseup', () => {
+      sim0State.dragging = false;
+    });
+    sim0Canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        sim0State.dragging = true;
+        handleSim0Pointer(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+    sim0Canvas.addEventListener('touchmove', (e) => {
+      if (sim0State.dragging && e.touches.length > 0) {
+        handleSim0Pointer(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+    sim0Canvas.addEventListener('touchend', () => {
+      sim0State.dragging = false;
+    });
+
+    sim0MassPSlider.addEventListener('input', (e) => {
+      sim0State.planetMult = parseFloat(e.target.value);
+      drawSim0();
+    });
+    sim0RSlider.addEventListener('input', (e) => {
+      sim0State.rMultiple = parseFloat(e.target.value);
+      drawSim0();
+    });
+    sim0TestMSlider.addEventListener('input', (e) => {
+      sim0State.testMass = parseInt(e.target.value, 10);
+      drawSim0();
+    });
+
+    // -------------------------------------------------------------------------
+    // 2. SIMULATION 1: GRAVITATIONAL POTENTIAL WELL & SATELLITE LAB (TAB 2)
+    // -------------------------------------------------------------------------
+    const G_CONST = 6.674e-11;
+    const M_EARTH = 5.972e24;
+    const R_EARTH = 6.371e6;
+
+    let sim1State = {
+      rMultiple: 2.0,     // r / R_E
+      satMass: 500,       // kg
+      planetMult: 1.0,    // M / M_E
+      isDropping: false,
+      dropStartR: 2.0,
+      dragging: false,
+      animId: null
+    };
+
+    const sim1SpaceCanvas = document.getElementById('sim1SpaceCanvas');
+    const sim1GraphCanvas = document.getElementById('sim1GraphCanvas');
+    const sim1RSlider = document.getElementById('sim1RSlider');
+    const sim1MSlider = document.getElementById('sim1MSlider');
+    const sim1PlanetSlider = document.getElementById('sim1PlanetSlider');
+
+    function resizeSim1Canvases() {
+      resizeCanvasDPR(sim1SpaceCanvas);
+      resizeCanvasDPR(sim1GraphCanvas);
+    }
+
+    function calculateSim1Physics() {
+      const M = sim1State.planetMult * M_EARTH;
+      const m = sim1State.satMass;
+      const r = sim1State.rMultiple * R_EARTH;
+
+      const U = -(G_CONST * M * m) / r; // Joules
+      let K = 0;
+      if (sim1State.isDropping) {
+        const r0 = sim1State.dropStartR * R_EARTH;
+        const U0 = -(G_CONST * M * m) / r0;
+        K = Math.max(0, U0 - U);
+      }
+      const E = U + K;
+      const F = (G_CONST * M * m) / (r * r);
+      return { U, K, E, F };
+    }
+
+    function updateSim1Telemetry() {
+      const { U, K, E, F } = calculateSim1Physics();
+      document.getElementById('sim1RVal').textContent = `${sim1State.rMultiple.toFixed(2)} R_E`;
+      document.getElementById('sim1SpaceLabel').textContent = `r = ${sim1State.rMultiple.toFixed(2)} R_E`;
+      document.getElementById('sim1MVal').textContent = `${sim1State.satMass} kg`;
+      document.getElementById('sim1PlanetVal').textContent = `${sim1State.planetMult.toFixed(1)} M_E`;
+
+      document.getElementById('telemetryU').textContent = `${(U / 1e9).toFixed(2)} GJ`;
+      document.getElementById('telemetryK').textContent = `${(K / 1e9).toFixed(2)} GJ`;
+      document.getElementById('telemetryE').textContent = `${(E / 1e9).toFixed(2)} GJ`;
+      document.getElementById('telemetryF').textContent = `${F.toFixed(0)} N`;
+    }
+
+    function drawSim1() {
+      if (!sim1SpaceCanvas || !sim1GraphCanvas) return;
+
+      // --- 1. Draw Space Canvas ---
+      const sRect = sim1SpaceCanvas.getBoundingClientRect();
+      const sw = sRect.width;
+      const sh = sRect.height;
+      if (sw > 0 && sh > 0) {
+        const ctx = sim1SpaceCanvas.getContext('2d');
+        ctx.clearRect(0, 0, sw, sh);
+
+        // Starry Space Background
+        ctx.fillStyle = '#030712';
+        ctx.fillRect(0, 0, sw, sh);
+        for (let i = 0; i < 32; i++) {
+          const sx = ((i * 73) % 100) * 0.01 * sw;
+          const sy = ((i * 41) % 100) * 0.01 * sh;
+          ctx.fillStyle = i % 3 === 0 ? 'rgba(255,255,255,0.75)' : 'rgba(148,163,184,0.45)';
+          ctx.beginPath();
+          ctx.arc(sx, sy, (i % 2) + 0.8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        const cx = sw * 0.24;
+        const cy = sh * 0.52;
+        const planetRadiusPx = 22 + sim1State.planetMult * 5;
+        const maxOrbitPx = sw - cx - 26;
+        const satDistPx = planetRadiusPx + ((sim1State.rMultiple - 1.0) / 5.0) * (maxOrbitPx - planetRadiusPx);
+        const satX = cx + satDistPx;
+        const satY = cy;
+
+        // Concentric Dashed Reference Rings
+        ctx.strokeStyle = 'rgba(99, 102, 241, 0.22)';
+        ctx.setLineDash([4, 4]);
+        for (let mult = 2; mult <= 6; mult++) {
+          const ringR = planetRadiusPx + ((mult - 1.0) / 5.0) * (maxOrbitPx - planetRadiusPx);
+          ctx.beginPath();
+          ctx.arc(cx, cy, ringR, -0.45, 0.45);
+          ctx.stroke();
+        }
+        ctx.setLineDash([]);
+
+        // Gravitational Attraction Force Vector Arrow
+        const arrowLen = Math.max(18, Math.min(55, 110 / (sim1State.rMultiple * sim1State.rMultiple)));
+        ctx.strokeStyle = '#f43f5e';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(satX - 10, satY);
+        ctx.lineTo(satX - 10 - arrowLen, satY);
+        ctx.stroke();
+        ctx.fillStyle = '#f43f5e';
+        ctx.beginPath();
+        ctx.moveTo(satX - 10 - arrowLen - 6, satY);
+        ctx.lineTo(satX - 10 - arrowLen + 2, satY - 4);
+        ctx.lineTo(satX - 10 - arrowLen + 2, satY + 4);
+        ctx.closePath();
+        ctx.fill();
+
+        // Planet Sphere
+        const grad = ctx.createRadialGradient(cx - 6, cy - 6, 4, cx, cy, planetRadiusPx);
+        grad.addColorStop(0, '#60a5fa');
+        grad.addColorStop(0.55, '#2563eb');
+        grad.addColorStop(1, '#1e1b4b');
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(cx, cy, planetRadiusPx, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#e0f2fe';
+        ctx.font = 'bold 11px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('Planet M', cx, cy + planetRadiusPx + 14);
+
+        // Satellite Node
+        ctx.fillStyle = '#fbbf24';
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(satX, satY, 8, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        // Solar Panels on Satellite
+        ctx.fillStyle = '#38bdf8';
+        ctx.fillRect(satX - 4, satY - 17, 8, 7);
+        ctx.fillRect(satX - 4, satY + 10, 8, 7);
+
+        ctx.fillStyle = '#fef08a';
+        ctx.font = 'bold 11px Inter, sans-serif';
+        ctx.fillText(`m = ${sim1State.satMass}kg`, satX, satY - 22);
+      }
+
+      // --- 2. Draw Potential Well Curve U(r) vs r ---
+      const gRect = sim1GraphCanvas.getBoundingClientRect();
+      const gw = gRect.width;
+      const gh = gRect.height;
+      if (gw > 0 && gh > 0) {
+        const gctx = sim1GraphCanvas.getContext('2d');
+        gctx.clearRect(0, 0, gw, gh);
+
+        gctx.fillStyle = '#090d16';
+        gctx.fillRect(0, 0, gw, gh);
+
+        const padL = 42;
+        const padR = 16;
+        const padT = 26;
+        const padB = 26;
+        const plotW = gw - padL - padR;
+        const plotH = gh - padT - padB;
+
+        // Zero Potential Axis (U = 0 at top)
+        gctx.strokeStyle = '#34d399';
+        gctx.lineWidth = 1.5;
+        gctx.beginPath();
+        gctx.moveTo(padL, padT);
+        gctx.lineTo(gw - padR, padT);
+        gctx.stroke();
+
+        gctx.fillStyle = '#6ee7b7';
+        gctx.font = 'bold 10px JetBrains Mono, monospace';
+        gctx.textAlign = 'left';
+        gctx.fillText('U = 0 (Zero Level at r → ∞)', padL + 6, padT - 7);
+
+        // Vertical r = R_E Surface Axis
+        gctx.strokeStyle = '#475569';
+        gctx.lineWidth = 1.5;
+        gctx.beginPath();
+        gctx.moveTo(padL, padT);
+        gctx.lineTo(padL, gh - padB);
+        gctx.stroke();
+
+        // Reference Scale Max Depth (at r = 1 R_E, planetMult = 2.5, satMass = 2000)
+        const maxRefU = (G_CONST * (2.5 * M_EARTH) * 2000) / R_EARTH;
+        const currentSurfaceU = (G_CONST * (sim1State.planetMult * M_EARTH) * sim1State.satMass) / R_EARTH;
+        const scaleU = Math.max(currentSurfaceU * 1.15, maxRefU * 0.35);
+
+        // Plot Curve U(r) = -GMm / r for r from 1 R_E to 6 R_E
+        gctx.strokeStyle = '#f472b6';
+        gctx.lineWidth = 3;
+        gctx.beginPath();
+        for (let i = 0; i <= 100; i++) {
+          const rMult = 1.0 + (i / 100) * 5.0;
+          const uMag = currentSurfaceU / rMult;
+          const px = padL + ((rMult - 1.0) / 5.0) * plotW;
+          const py = padT + Math.min(plotH, (uMag / scaleU) * plotH);
+          if (i === 0) gctx.moveTo(px, py);
+          else gctx.lineTo(px, py);
+        }
+        gctx.stroke();
+
+        // Current Marker Point on Curve
+        const curUMag = currentSurfaceU / sim1State.rMultiple;
+        const markerX = padL + ((sim1State.rMultiple - 1.0) / 5.0) * plotW;
+        const markerY = padT + Math.min(plotH, (curUMag / scaleU) * plotH);
+
+        // Dashed Drop Lines
+        gctx.strokeStyle = 'rgba(251, 191, 36, 0.5)';
+        gctx.setLineDash([3, 3]);
+        gctx.beginPath();
+        gctx.moveTo(markerX, padT);
+        gctx.lineTo(markerX, markerY);
+        gctx.lineTo(padL, markerY);
+        gctx.stroke();
+        gctx.setLineDash([]);
+
+        // Glowing Marker Dot
+        gctx.fillStyle = '#fbbf24';
+        gctx.beginPath();
+        gctx.arc(markerX, markerY, 6, 0, Math.PI * 2);
+        gctx.fill();
+        gctx.strokeStyle = '#ffffff';
+        gctx.lineWidth = 2;
+        gctx.stroke();
+
+        // Axis Labels
+        gctx.fillStyle = '#94a3b8';
+        gctx.font = '10px Inter, sans-serif';
+        gctx.textAlign = 'center';
+        gctx.fillText('R_E', padL, gh - 8);
+        gctx.fillText('3.5 R_E', padL + plotW * 0.5, gh - 8);
+        gctx.fillText('6.0 R_E → r', padL + plotW - 18, gh - 8);
+      }
+
+      updateSim1Telemetry();
+    }
+
+    function releaseSatelliteDrop() {
+      if (sim1State.isDropping || sim1State.rMultiple <= 1.02) return;
+      sim1State.isDropping = true;
+      sim1State.dropStartR = sim1State.rMultiple;
+
+      function stepDrop() {
+        if (!sim1State.isDropping) return;
+        sim1State.rMultiple -= 0.035;
+        if (sim1State.rMultiple <= 1.0) {
+          sim1State.rMultiple = 1.0;
+          sim1State.isDropping = false;
+        }
+        sim1RSlider.value = sim1State.rMultiple.toFixed(2);
+        drawSim1();
+        if (sim1State.isDropping) {
+          sim1State.animId = requestAnimationFrame(stepDrop);
+        }
+      }
+      sim1State.animId = requestAnimationFrame(stepDrop);
+    }
+
+    function resetSim1() {
+      sim1State.isDropping = false;
+      if (sim1State.animId) cancelAnimationFrame(sim1State.animId);
+      sim1State.rMultiple = 2.0;
+      sim1RSlider.value = '2.0';
+      drawSim1();
+    }
+
+    sim1RSlider.addEventListener('input', (e) => {
+      sim1State.isDropping = false;
+      sim1State.rMultiple = parseFloat(e.target.value);
+      drawSim1();
+    });
+    sim1MSlider.addEventListener('input', (e) => {
+      sim1State.satMass = parseInt(e.target.value, 10);
+      drawSim1();
+    });
+    sim1PlanetSlider.addEventListener('input', (e) => {
+      sim1State.planetMult = parseFloat(e.target.value);
+      drawSim1();
+    });
+
+    function handleSpaceCanvasPointer(clientX) {
+      const rect = sim1SpaceCanvas.getBoundingClientRect();
+      const cx = rect.width * 0.24;
+      const planetRadiusPx = 22 + sim1State.planetMult * 5;
+      const maxOrbitPx = rect.width - cx - 26;
+      const relX = clientX - rect.left;
+      const frac = Math.max(0, Math.min(1, (relX - planetRadiusPx) / (maxOrbitPx - planetRadiusPx)));
+      sim1State.isDropping = false;
+      sim1State.rMultiple = 1.0 + frac * 5.0;
+      sim1RSlider.value = sim1State.rMultiple.toFixed(2);
+      drawSim1();
+    }
+
+    sim1SpaceCanvas.addEventListener('mousedown', (e) => {
+      sim1State.dragging = true;
+      handleSpaceCanvasPointer(e.clientX);
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (sim1State.dragging) handleSpaceCanvasPointer(e.clientX);
+    });
+    window.addEventListener('mouseup', () => {
+      sim1State.dragging = false;
+    });
+    sim1SpaceCanvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        sim1State.dragging = true;
+        handleSpaceCanvasPointer(e.touches[0].clientX);
+      }
+    }, { passive: true });
+    sim1SpaceCanvas.addEventListener('touchmove', (e) => {
+      if (sim1State.dragging && e.touches.length > 0) {
+        handleSpaceCanvasPointer(e.touches[0].clientX);
+      }
+    }, { passive: true });
+    sim1SpaceCanvas.addEventListener('touchend', () => {
+      sim1State.dragging = false;
+    });
+
+    // -------------------------------------------------------------------------
+    // 3. INTERACTIVE SVG DERIVATION DIAGRAM (TAB 3)
+    // -------------------------------------------------------------------------
+    const derivSlider = document.getElementById('derivSlider');
+    const svgPointAGroup = document.getElementById('svgPointAGroup');
+    const svgXLine = document.getElementById('svgXLine');
+    const svgXTopTick = document.getElementById('svgXTopTick');
+    const svgXLabel = document.getElementById('svgXLabel');
+    const derivXStatus = document.getElementById('derivXStatus');
+
+    if (derivSlider) {
+      derivSlider.addEventListener('input', (e) => {
+        const val = parseInt(e.target.value, 10); // 0 (near infinity) to 100 (at P)
+        const yOffset = (val / 100) * 135;
+        const currentAy = 100 + yOffset;
+
+        svgPointAGroup.setAttribute('transform', `translate(0, ${yOffset})`);
+        svgXLine.setAttribute('y2', currentAy);
+        svgXTopTick.setAttribute('y1', currentAy);
+        svgXTopTick.setAttribute('y2', currentAy);
+        svgXLabel.setAttribute('y', (355 + currentAy) / 2);
+
+        if (val < 12) {
+          derivXStatus.textContent = 'x → ∞ (Near Zero Level)';
+        } else if (val > 92) {
+          derivXStatus.textContent = 'x = r (Reached Target P!)';
+        } else {
+          const xMult = (5.0 - (val / 100) * 3.0).toFixed(2);
+          derivXStatus.textContent = `x = ${xMult} R (Integrating dx)`;
+        }
+      });
+    }
+
+    // -------------------------------------------------------------------------
+    // 4. SIMULATION 2: GRAVITATIONAL POTENTIAL EQUIPOTENTIAL LAB (TAB 4)
+    // -------------------------------------------------------------------------
+    let sim2State = {
+      rMultiple: 2.0,
+      probeAngle: -0.6,
+      probeMass: 10,
+      twoBody: false,
+      dragging: false
+    };
+
+    const sim2Canvas = document.getElementById('sim2Canvas');
+    const sim2RSlider = document.getElementById('sim2RSlider');
+    const sim2MassSlider = document.getElementById('sim2MassSlider');
+
+    function resizeSim2Canvas() {
+      resizeCanvasDPR(sim2Canvas);
+    }
+
+    function toggleTwoBodyMode() {
+      sim2State.twoBody = !sim2State.twoBody;
+      const btn = document.getElementById('btnTwoBody');
+      const badge = document.getElementById('sim2ModeBadge');
+      if (sim2State.twoBody) {
+        btn.className = 'px-4 py-2 rounded-xl bg-cyan-600 text-white font-bold text-xs sm:text-sm shadow transition';
+        btn.textContent = '🌍 Single Body (Earth Only)';
+        badge.textContent = 'Earth + Moon Superposition';
+      } else {
+        btn.className = 'px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs sm:text-sm transition';
+        btn.textContent = '🌗 Add Moon (Superposition)';
+        badge.textContent = 'Single Body (Earth)';
+      }
+      drawSim2();
+    }
+
+    function drawSim2() {
+      if (!sim2Canvas) return;
+      const rect = sim2Canvas.getBoundingClientRect();
+      const w = rect.width;
+      const h = rect.height;
+      if (w === 0 || h === 0) return;
+
+      const ctx = sim2Canvas.getContext('2d');
+      ctx.clearRect(0, 0, w, h);
+
+      ctx.fillStyle = '#04091a';
+      ctx.fillRect(0, 0, w, h);
+
+      const earthX = sim2State.twoBody ? w * 0.36 : w * 0.5;
+      const earthY = h * 0.5;
+      const earthPxR = 24;
+      const scalePxPerR = Math.min(w, h) * 0.16;
+
+      // Concentric Equipotential Rings around Earth
+      const ringMultiples = [1.5, 2.0, 2.75, 3.5, 4.3];
+      ringMultiples.forEach((mult, idx) => {
+        const rad = mult * scalePxPerR;
+        ctx.strokeStyle = `rgba(34, 211, 238, ${0.42 - idx * 0.06})`;
+        ctx.lineWidth = 1.4;
+        ctx.setLineDash([5, 4]);
+        ctx.beginPath();
+        ctx.arc(earthX, earthY, rad, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.fillStyle = 'rgba(103, 232, 249, 0.75)';
+        ctx.font = '10px JetBrains Mono, monospace';
+        ctx.fillText(`-${(62.5 / mult).toFixed(0)} MJ/kg`, earthX + rad * 0.72, earthY - rad * 0.72);
+      });
+      ctx.setLineDash([]);
+
+      // Draw Earth
+      const eGrad = ctx.createRadialGradient(earthX - 5, earthY - 5, 3, earthX, earthY, earthPxR);
+      eGrad.addColorStop(0, '#38bdf8');
+      eGrad.addColorStop(1, '#1d4ed8');
+      ctx.fillStyle = eGrad;
+      ctx.beginPath();
+      ctx.arc(earthX, earthY, earthPxR, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 11px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Earth', earthX, earthY + 4);
+
+      // Optional Moon for Scalar Superposition V_net = V_E + V_M
+      const moonX = w * 0.80;
+      const moonY = h * 0.5;
+      if (sim2State.twoBody) {
+        [24, 42].forEach((mRad) => {
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.35)';
+          ctx.setLineDash([3, 3]);
+          ctx.beginPath();
+          ctx.arc(moonX, moonY, mRad, 0, Math.PI * 2);
+          ctx.stroke();
+        });
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = '#cbd5e1';
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, 12, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#0f172a';
+        ctx.font = 'bold 9px Inter, sans-serif';
+        ctx.fillText('Moon', moonX, moonY + 3);
+      }
+
+      // Probe Coordinates
+      const probeDistPx = sim2State.rMultiple * scalePxPerR;
+      const probeX = earthX + Math.cos(sim2State.probeAngle) * probeDistPx;
+      const probeY = earthY + Math.sin(sim2State.probeAngle) * probeDistPx;
+
+      // Connecting line from Earth to Probe
+      ctx.strokeStyle = 'rgba(250, 204, 21, 0.45)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(earthX, earthY);
+      ctx.lineTo(probeX, probeY);
+      ctx.stroke();
+
+      // Probe Circle
+      ctx.fillStyle = '#facc15';
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.arc(probeX, probeY, 8, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#fef08a';
+      ctx.font = 'bold 11px JetBrains Mono, monospace';
+      ctx.fillText(`Probe (${sim2State.probeMass}kg)`, probeX, probeY - 13);
+
+      // Physics Calculations
+      const V_earth = -(G_CONST * M_EARTH) / (sim2State.rMultiple * R_EARTH); // J/kg
+      let V_total = V_earth;
+      if (sim2State.twoBody) {
+        const distMoonPx = Math.max(18, Math.hypot(probeX - moonX, probeY - moonY));
+        const distMoonMeters = (distMoonPx / scalePxPerR) * R_EARTH;
+        const M_MOON = 7.35e22;
+        const V_moon = -(G_CONST * M_MOON) / distMoonMeters;
+        V_total += V_moon;
+      }
+      const U_total = V_total * sim2State.probeMass;
+
+      document.getElementById('sim2RLabel').textContent = `${sim2State.rMultiple.toFixed(2)} R_E`;
+      document.getElementById('sim2MassLabel').textContent = `${sim2State.probeMass} kg`;
+      document.getElementById('sim2VReadout').textContent = `${(V_total / 1e6).toFixed(2)} MJ/kg`;
+      document.getElementById('sim2UReadout').textContent = `${(U_total / 1e6).toFixed(2)} MJ`;
+    }
+
+    function handleSim2Pointer(clientX, clientY) {
+      const rect = sim2Canvas.getBoundingClientRect();
+      const px = clientX - rect.left;
+      const py = clientY - rect.top;
+      const earthX = sim2State.twoBody ? rect.width * 0.36 : rect.width * 0.5;
+      const earthY = rect.height * 0.5;
+      const scalePxPerR = Math.min(rect.width, rect.height) * 0.16;
+
+      const dx = px - earthX;
+      const dy = py - earthY;
+      const dist = Math.hypot(dx, dy);
+      sim2State.rMultiple = Math.max(1.0, Math.min(4.5, dist / scalePxPerR));
+      sim2State.probeAngle = Math.atan2(dy, dx);
+      sim2RSlider.value = sim2State.rMultiple.toFixed(2);
+      drawSim2();
+    }
+
+    sim2Canvas.addEventListener('mousedown', (e) => {
+      sim2State.dragging = true;
+      handleSim2Pointer(e.clientX, e.clientY);
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (sim2State.dragging) handleSim2Pointer(e.clientX, e.clientY);
+    });
+    window.addEventListener('mouseup', () => {
+      sim2State.dragging = false;
+    });
+    sim2Canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        sim2State.dragging = true;
+        handleSim2Pointer(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+    sim2Canvas.addEventListener('touchmove', (e) => {
+      if (sim2State.dragging && e.touches.length > 0) {
+        handleSim2Pointer(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+    sim2Canvas.addEventListener('touchend', () => {
+      sim2State.dragging = false;
+    });
+
+    sim2RSlider.addEventListener('input', (e) => {
+      sim2State.rMultiple = parseFloat(e.target.value);
+      drawSim2();
+    });
+    sim2MassSlider.addEventListener('input', (e) => {
+      sim2State.probeMass = parseInt(e.target.value, 10);
+      drawSim2();
+    });
+
+    // -------------------------------------------------------------------------
+    // 5. EQUATION BRIDGE CALCULATOR (TAB 5)
+    // -------------------------------------------------------------------------
+    const calcRInput = document.getElementById('calcRInput');
+    const calcMInput = document.getElementById('calcMInput');
+
+    function updateEquationSandbox() {
+      if (!calcRInput || !calcMInput) return;
+      const rMult = parseFloat(calcRInput.value);
+      const mass = parseFloat(calcMInput.value);
+      const r = rMult * R_EARTH;
+
+      const V = -(G_CONST * M_EARTH) / r;
+      const U = mass * V;
+      const E = (G_CONST * M_EARTH) / (r * r);
+      const F = mass * E;
+
+      document.getElementById('calcRDisp').textContent =
+        rMult === 1 ? '1.00 R_E (Surface)' : `${rMult.toFixed(2)} R_E`;
+      document.getElementById('calcMDisp').textContent = `${mass} kg`;
+
+      document.getElementById('outCalcV').textContent = `${(V / 1e6).toFixed(2)} MJ/kg`;
+      document.getElementById('outCalcU').textContent =
+        Math.abs(U) >= 1e9 ? `${(U / 1e9).toFixed(2)} GJ` : `${(U / 1e6).toFixed(1)} MJ`;
+      document.getElementById('outCalcE').textContent = `${E.toFixed(2)} N/kg`;
+      document.getElementById('outCalcF').textContent = `${F.toFixed(0)} N`;
+    }
+
+    if (calcRInput && calcMInput) {
+      calcRInput.addEventListener('input', updateEquationSandbox);
+      calcMInput.addEventListener('input', updateEquationSandbox);
+    }
+
+    // -------------------------------------------------------------------------
+    // 6. PRACTICE NUMERICALS WITH STEP-BY-STEP SOLUTIONS (TAB 6)
+    // -------------------------------------------------------------------------
+    const numericalsData = [
+      {
+        num: 1,
+        badge: 'NCERT Direct Application',
+        question:
+          'A satellite of mass $m = 200\\text{ kg}$ orbits the Earth at a height $h$ equal to the radius of the Earth ($h = R_E$). Calculate (a) the gravitational potential $V$, (b) the gravitational potential energy $U$, and (c) the gravitational field intensity $E$ at the satellite\'s orbit.',
+        hint: 'Distance from Earth\'s centre is $r = R_E + h = 2R_E = 1.28 \\times 10^7\\text{ m}$. Use $V = -GM_E/r$, $U = mV$, and $E = GM_E/r^2$.',
+        steps: [
+          '<strong>Given:</strong> $m = 200\\text{ kg}$, $r = R_E + h = 2R_E = 2 \\times 6.4 \\times 10^6\\text{ m} = 1.28 \\times 10^7\\text{ m}$, $GM_E = 6.67 \\times 10^{-11} \\times 6.0 \\times 10^{24} = 4.002 \\times 10^{14}\\text{ N}\\cdot\\text{m}^2\\text{ kg}^{-1}$.',
+          '<strong>(a) Gravitational Potential ($V$):</strong> $$V = -\\frac{GM_E}{r} = -\\frac{4.002 \\times 10^{14}}{1.28 \\times 10^7} = -3.13 \\times 10^7\\text{ J kg}^{-1}$$',
+          '<strong>(b) Gravitational Potential Energy ($U$):</strong> $$U = m \\cdot V = 200 \\times (-3.13 \\times 10^7) = -6.26 \\times 10^9\\text{ J}$$',
+          '<strong>(c) Gravitational Field Intensity ($E$):</strong> $$E = \\frac{GM_E}{r^2} = \\frac{4.002 \\times 10^{14}}{(1.28 \\times 10^7)^2} = 2.44\\text{ N kg}^{-1} \\; (\\text{radially inward})$$'
+        ]
+      },
+      {
+        num: 2,
+        badge: 'Work Done & Change in P.E.',
+        question:
+          'Calculate the work done by an external agent in shifting a space probe of mass $m = 50\\text{ kg}$ from a circular orbit of radius $r_1 = 2R_E$ to a higher orbit of radius $r_2 = 4R_E$.',
+        hint: 'External work done equals the increase in gravitational potential energy: $W_{\\text{ext}} = \\Delta U = U_2 - U_1 = GM_E m \\left(\\frac{1}{r_1} - \\frac{1}{r_2}\\right)$.',
+        steps: [
+          '<strong>Formula:</strong> $$W_{\\text{ext}} = \\Delta U = GM_E m \\left( \\frac{1}{r_1} - \\frac{1}{r_2} \\right)$$',
+          '<strong>Substitute $r_1 = 2R_E$ and $r_2 = 4R_E$:</strong> $$\\Delta U = GM_E m \\left( \\frac{1}{2R_E} - \\frac{1}{4R_E} \\right) = \\frac{GM_E m}{4R_E}$$',
+          '<strong>Since $g = \\frac{GM_E}{R_E^2} \\implies \\frac{GM_E}{R_E} = gR_E$:</strong> $$\\Delta U = \\frac{mgR_E}{4} = \\frac{50 \\times 9.8 \\times 6.4 \\times 10^6}{4} = 7.84 \\times 10^8\\text{ J}$$'
+        ]
+      },
+      {
+        num: 3,
+        badge: 'Superposition of Potential',
+        question:
+          'Two heavy spheres each of mass $M = 100\\text{ kg}$ and radius $0.10\\text{ m}$ are placed $1.0\\text{ m}$ apart on a horizontal table. What is the gravitational potential $V$ and potential energy $U$ of a $10\\text{ kg}$ mass placed at the midpoint of the line joining their centres?',
+        hint: 'Gravitational potential is a scalar! Simply add the potentials due to both spheres at distance $r = 0.5\\text{ m}$ from each.',
+        steps: [
+          '<strong>Distance from each sphere to midpoint:</strong> $r = \\frac{1.0\\text{ m}}{2} = 0.5\\text{ m}$.',
+          '<strong>Net Gravitational Potential ($V$) at midpoint:</strong> $$V = V_1 + V_2 = -\\frac{GM}{r} - \\frac{GM}{r} = -\\frac{2GM}{r}$$',
+          '<strong>Substitute values:</strong> $$V = -\\frac{2 \\times 6.67 \\times 10^{-11} \\times 100}{0.5} = -2.67 \\times 10^{-8}\\text{ J kg}^{-1}$$',
+          '<strong>Potential Energy ($U$) of $m = 10\\text{ kg}$ at midpoint:</strong> $$U = m \\cdot V = 10 \\times (-2.67 \\times 10^{-8}) = -2.67 \\times 10^{-7}\\text{ J}$$'
+        ]
+      },
+      {
+        num: 4,
+        badge: 'Escape Work & Energy Conservation',
+        question:
+          'A rocket of mass $m = 500\\text{ kg}$ is resting on the surface of the Earth. How much minimum energy must be supplied to the rocket to take it completely out of Earth\'s gravitational field (to infinity)? Also find its escape speed.',
+        hint: 'At the surface, $U_i = -mgR_E$. At infinity, $U_f = 0$. Minimum energy needed is $\\Delta U = U_f - U_i = +mgR_E$.',
+        steps: [
+          '<strong>Initial P.E. on Earth\'s surface:</strong> $$U_i = -\\frac{GM_E m}{R_E} = -mgR_E$$',
+          '<strong>Minimum Energy Required to Reach Infinity ($U_f = 0$):</strong> $$E_{\\min} = U_f - U_i = 0 - (-mgR_E) = mgR_E$$',
+          '<strong>Calculate Numerical Value:</strong> $$E_{\\min} = 500 \\times 9.8 \\times 6.4 \\times 10^6 = 3.136 \\times 10^{10}\\text{ J}$$',
+          '<strong>Escape Speed ($\\frac{1}{2}mv_e^2 = mgR_E$):</strong> $$v_e = \\sqrt{2gR_E} = \\sqrt{2 \\times 9.8 \\times 6.4 \\times 10^6} \\approx 11.2 \\times 10^3\\text{ m s}^{-1} = 11.2\\text{ km s}^{-1}$$'
+        ]
+      },
+      {
+        num: 5,
+        badge: 'Conceptual HOTS Numerical',
+        question:
+          'At a point on the surface of a spherical planet, the gravitational potential is $V = -4.0 \\times 10^7\\text{ J kg}^{-1}$ and the acceleration due to gravity is $g = 8.0\\text{ m s}^{-2}$. Determine (a) the radius $R$ of the planet, and (b) the potential energy of a $25\\text{ kg}$ boulder on its surface.',
+        hint: 'Note that $|V_{\\text{surface}}| = \\frac{GM}{R}$ and $g = \\frac{GM}{R^2}$. Dividing the two gives $R = \\frac{|V|}{g}$!',
+        steps: [
+          '<strong>(a) Find Planet Radius ($R$):</strong> We know $|V| = \\frac{GM}{R}$ and $g = \\frac{GM}{R^2}$. Dividing the first by the second: $$\\frac{|V|}{g} = \\frac{GM/R}{GM/R^2} = R$$',
+          '<strong>Substitute given values:</strong> $$R = \\frac{4.0 \\times 10^7\\text{ J kg}^{-1}}{8.0\\text{ m s}^{-2}} = 5.0 \\times 10^6\\text{ m} = 5000\\text{ km}$$',
+          '<strong>(b) Potential Energy ($U$) of $m = 25\\text{ kg}$ boulder:</strong> $$U = m \\cdot V = 25 \\times (-4.0 \\times 10^7) = -1.0 \\times 10^9\\text{ J}$$'
+        ]
+      }
+    ];
+
+    let allSolutionsOpen = false;
+
+    function renderNumericals() {
+      const container = document.getElementById('numericalsContainer');
+      if (!container) return;
+
+      container.innerHTML = numericalsData
+        .map(
+          (item) => `
+        <div class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6 transition hover:border-indigo-300">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-indigo-600 text-white font-extrabold text-sm flex items-center justify-center shadow-sm">
+                Q${item.num}
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800">
+                ${item.badge}
+              </span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="toggleNumericalBox('hint-${item.num}')"
+                class="px-3 py-1.5 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-xs transition">
+                💡 Hint
+              </button>
+              <button onclick="toggleNumericalBox('sol-${item.num}')"
+                class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition">
+                ✓ Step-by-Step Solution
+              </button>
+            </div>
+          </div>
+
+          <p class="text-sm sm:text-base font-medium text-slate-900 leading-relaxed">
+            ${item.question}
+          </p>
+
+          <!-- Hint Box -->
+          <div id="hint-${item.num}" class="hidden mt-3 p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-950">
+            <strong>Teacher's Hint:</strong> ${item.hint}
+          </div>
+
+          <!-- Solution Box -->
+          <div id="sol-${item.num}" class="num-sol-box hidden mt-4 p-4 sm:p-5 rounded-xl bg-white border border-emerald-200 shadow-inner space-y-2.5 text-xs sm:text-sm text-slate-800">
+            <p class="text-xs font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 border-b border-emerald-100 dark:border-emerald-900/40 pb-1">
+              Detailed Solution
+            </p>
+            ${item.steps.map((step) => `<div class="leading-relaxed">${step}</div>`).join('')}
+          </div>
+        </div>
+      `
+        )
+        .join('');
+    }
+
+    function toggleNumericalBox(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.toggle('hidden');
+      renderAllMath();
+    }
+
+    function toggleAllSolutions() {
+      allSolutionsOpen = !allSolutionsOpen;
+      const boxes = document.querySelectorAll('.num-sol-box');
+      const btn = document.getElementById('btnToggleAllSol');
+      boxes.forEach((box) => {
+        if (allSolutionsOpen) box.classList.remove('hidden');
+        else box.classList.add('hidden');
+      });
+      btn.textContent = allSolutionsOpen ? '🙈 Collapse All Solutions' : '👁️ Expand All Solutions';
+      renderAllMath();
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. GAMIFIED QUIZ SESSION (TAB 7) WITH SYNTHESIZED AUDIO
+    // -------------------------------------------------------------------------
+    const quizQuestions = [
+      {
+        topic: 'Gravitational Field Intensity',
+        question: 'What is the dimensional formula of gravitational field intensity $\\vec{E}$?',
+        options: [
+          '$[M^1 L^1 T^{-2}]$',
+          '$[M^0 L^1 T^{-2}]$',
+          '$[M^0 L^2 T^{-2}]$',
+          '$[M^1 L^2 T^{-2}]$'
+        ],
+        correctIndex: 1,
+        explanation:
+          'Since $E = F/m$, its dimensions are $[MLT^{-2}] / [M] = [M^0 L^1 T^{-2}]$, which is identical to the dimensions of acceleration due to gravity $g$.'
+      },
+      {
+        topic: 'Zero Level & Variation of U',
+        question: 'As a spacecraft moves away from the Earth towards infinity ($r \\to \\infty$), its gravitational potential energy $U$:',
+        options: [
+          'Decreases continuously and becomes more negative',
+          'Remains constant at $-GMm/R$',
+          'Increases and approaches its maximum value of zero',
+          'Becomes positive and approaches $+\\infty$'
+        ],
+        correctIndex: 2,
+        explanation:
+          'Because $U = -GMm/r$ is negative, increasing $r$ makes $U$ less negative (i.e., algebraically larger) until it reaches its maximum possible value $U = 0$ at infinity.'
+      },
+      {
+        topic: 'Gravitational Potential (V)',
+        question: 'Which of the following statements about Gravitational Potential ($V$) is INCORRECT?',
+        options: [
+          'It is a scalar quantity with SI unit $\\text{J kg}^{-1}$.',
+          'Its dimensional formula is $[M^0 L^2 T^{-2}]$.',
+          'It depends directly on the mass $m$ of the test body placed at that point.',
+          'At the surface of the Earth, $V = -GM/R$.'
+        ],
+        correctIndex: 2,
+        explanation:
+          'Gravitational potential $V = W/m = -GM/r$ is defined per unit mass, so it depends ONLY on the source mass $M$ and distance $r$—never on the test mass $m$.'
+      },
+      {
+        topic: 'Field & Potential Relation',
+        question: 'If the gravitational potential $V$ is constant throughout a certain region of space, what can be concluded about the gravitational field intensity $E$ in that region?',
+        options: [
+          '$E$ is uniform and non-zero',
+          '$E$ is zero ($E = 0$)',
+          '$E$ is infinitely large',
+          '$E$ points radially outward'
+        ],
+        correctIndex: 1,
+        explanation:
+          'By the potential gradient relation $E = -dV/dr$, if $V$ is constant everywhere in a region, its spatial derivative $dV/dr = 0$, hence $E = 0$.'
+      },
+      {
+        topic: 'Work Done in Gravitational Field',
+        question: 'A body of mass $m$ is lifted from the surface of the Earth ($r = R$) to a height $h = R$ above the surface. The increase in its gravitational potential energy $\\Delta U$ is:',
+        options: [
+          '$mgR$',
+          '$2mgR$',
+          '$\\frac{1}{2}mgR$',
+          '$\\frac{1}{4}mgR$'
+        ],
+        correctIndex: 2,
+        explanation:
+          'Here $h = R$ is NOT small compared to $R$, so we use the exact formula: $\\Delta U = GMm\\left(\\frac{1}{R} - \\frac{1}{2R}\\right) = \\frac{GMm}{2R} = \\frac{1}{2}mgR$.'
+      }
+    ];
+
+    let quizState = {
+      currentIdx: 0,
+      score: 0,
+      streak: 0,
+      answered: false,
+      soundOn: true
+    };
+
+    function playFeedbackTone(isCorrect) {
+      if (!quizState.soundOn) return;
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        if (isCorrect) {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+          osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1); // E5
+          osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2); // G5
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.4);
+        } else {
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(220, ctx.currentTime);
+          osc.frequency.linearRampToValueAtTime(160, ctx.currentTime + 0.25);
+          gain.gain.setValueAtTime(0.12, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.3);
+        }
+      } catch (err) {
+        // Ignore audio errors if blocked by browser autoplay policy
+      }
+    }
+
+    function toggleSound() {
+      quizState.soundOn = !quizState.soundOn;
+      document.getElementById('soundToggleBtn').textContent = quizState.soundOn ? '🔊 Sound: ON' : '🔇 Sound: OFF';
+    }
+
+    function renderQuizQuestion() {
+      const q = quizQuestions[quizState.currentIdx];
+      quizState.answered = false;
+
+      document.getElementById('quizTopicTag').textContent = `Topic: ${q.topic}`;
+      document.getElementById('quizQuestionText').innerHTML = q.question;
+      document.getElementById('quizProgressText').textContent = `Question ${quizState.currentIdx + 1} of ${quizQuestions.length}`;
+      const pct = ((quizState.currentIdx + 1) / quizQuestions.length) * 100;
+      document.getElementById('quizPercentText').textContent = `${pct}%`;
+      document.getElementById('quizProgressBar').style.width = `${pct}%`;
+
+      const feedbackBox = document.getElementById('quizFeedbackBox');
+      feedbackBox.classList.add('hidden');
+
+      const nextBtn = document.getElementById('quizNextBtn');
+      nextBtn.disabled = true;
+      nextBtn.textContent = quizState.currentIdx === quizQuestions.length - 1 ? 'Finish Quiz 🏆' : 'Next Question →';
+
+      const grid = document.getElementById('quizOptionsGrid');
+      const letters = ['A', 'B', 'C', 'D'];
+      grid.innerHTML = q.options
+        .map(
+          (opt, idx) => `
+        <button onclick="selectQuizOption(${idx})" id="quiz-opt-${idx}"
+          class="quiz-opt-btn w-full text-left p-4 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-indigo-400 hover:bg-indigo-50/50 dark:hover:bg-slate-800 transition flex items-center gap-3.5">
+          <span class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-extrabold text-sm flex items-center justify-center shrink-0">
+            ${letters[idx]}
+          </span>
+          <span class="text-sm sm:text-base font-medium text-slate-800">${opt}</span>
+        </button>
+      `
+        )
+        .join('');
+
+      renderAllMath();
+    }
+
+    function selectQuizOption(selectedIdx) {
+      if (quizState.answered) return;
+      quizState.answered = true;
+
+      const q = quizQuestions[quizState.currentIdx];
+      const isCorrect = selectedIdx === q.correctIndex;
+
+      if (isCorrect) {
+        quizState.score += 10;
+        quizState.streak += 1;
+      } else {
+        quizState.streak = 0;
+      }
+
+      playFeedbackTone(isCorrect);
+
+      document.getElementById('quizScoreDisplay').textContent = quizState.score;
+      document.getElementById('quizStreakDisplay').textContent = `${quizState.streak}🔥`;
+
+      // Highlight buttons
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`quiz-opt-${idx}`);
+        btn.disabled = true;
+        if (idx === q.correctIndex) {
+          btn.className =
+            'w-full text-left p-4 rounded-2xl border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 flex items-center gap-3.5';
+          btn.querySelector('span:first-child').className =
+            'w-8 h-8 rounded-xl bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0';
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.className =
+            'w-full text-left p-4 rounded-2xl border-2 border-rose-500 bg-rose-50 dark:bg-rose-950/50 flex items-center gap-3.5';
+          btn.querySelector('span:first-child').className =
+            'w-8 h-8 rounded-xl bg-rose-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0';
+        } else {
+          btn.className =
+            'w-full text-left p-4 rounded-2xl border-2 border-slate-200 dark:border-slate-800 opacity-60 flex items-center gap-3.5';
+        }
+      });
+
+      // Show Explanation Feedback
+      const feedbackBox = document.getElementById('quizFeedbackBox');
+      const feedbackTitle = document.getElementById('quizFeedbackTitle');
+      const feedbackExp = document.getElementById('quizFeedbackExplanation');
+
+      feedbackBox.classList.remove('hidden');
+      if (isCorrect) {
+        feedbackBox.className = 'p-4 sm:p-5 rounded-2xl border border-emerald-300 bg-emerald-50 text-emerald-950 text-xs sm:text-sm leading-relaxed';
+        feedbackTitle.textContent = '✅ Spot On! +10 Points';
+      } else {
+        feedbackBox.className = 'p-4 sm:p-5 rounded-2xl border border-rose-300 bg-rose-50 text-rose-950 text-xs sm:text-sm leading-relaxed';
+        feedbackTitle.textContent = '❌ Not Quite! Let\'s Review the Concept:';
+      }
+      feedbackExp.innerHTML = q.explanation;
+
+      document.getElementById('quizNextBtn').disabled = false;
+      renderAllMath();
+    }
+
+    function nextQuizQuestion() {
+      if (quizState.currentIdx < quizQuestions.length - 1) {
+        quizState.currentIdx += 1;
+        renderQuizQuestion();
+      } else {
+        showQuizResults();
+      }
+    }
+
+    function showQuizResults() {
+      document.getElementById('quizActiveView').classList.add('hidden');
+      document.getElementById('quizResultView').classList.remove('hidden');
+      document.getElementById('quizFinalScoreText').textContent = `You scored ${quizState.score} out of 50 points!`;
+
+      const rankBadge = document.getElementById('quizRankBadge');
+      const summaryMsg = document.getElementById('quizSummaryMessage');
+
+      if (quizState.score === 50) {
+        rankBadge.textContent = '🌟 Grandmaster of Gravitation';
+        summaryMsg.textContent = 'Outstanding! You have complete command over Gravitational Field, Potential Energy, Potential, and NCERT derivations.';
+      } else if (quizState.score >= 30) {
+        rankBadge.textContent = '🚀 Orbital Scholar';
+        summaryMsg.textContent = 'Great job! Review any missed explanations and explore the interactive labs to aim for a perfect 50/50.';
+      } else {
+        rankBadge.textContent = '📘 Gravity Cadet';
+        summaryMsg.textContent = 'Good start! Revisit Tabs 1–5 and try the interactive simulations before retaking the challenge.';
+      }
+    }
+
+    function restartQuiz() {
+      quizState.currentIdx = 0;
+      quizState.score = 0;
+      quizState.streak = 0;
+      document.getElementById('quizScoreDisplay').textContent = '0';
+      document.getElementById('quizStreakDisplay').textContent = '0🔥';
+      document.getElementById('quizResultView').classList.add('hidden');
+      document.getElementById('quizActiveView').classList.remove('hidden');
+      renderQuizQuestion();
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. INITIALIZATION ON WINDOW LOAD
+    // -------------------------------------------------------------------------
+    window.addEventListener('resize', () => {
+      if (currentTab === 0) {
+        resizeSim0Canvas();
+        drawSim0();
+      } else if (currentTab === 1) {
+        resizeSim1Canvases();
+        drawSim1();
+      } else if (currentTab === 3) {
+        resizeSim2Canvas();
+        drawSim2();
+      }
+    });
+
+    window.addEventListener('load', () => {
+      renderNumericals();
+      renderQuizQuestion();
+      updateEquationSandbox();
+      resizeSim0Canvas();
+      drawSim0();
+      renderAllMath();
+    });
+  </script>
+</body>
+</html>
